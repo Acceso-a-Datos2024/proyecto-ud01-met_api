@@ -5,6 +5,6 @@ public class test {
     {
         ApiRequester r = new ApiRequester();
 
-        r.getTotalNumberOfArtPieces();
+        System.out.println(r.getRandomArtPiece().getPrimaryImage());
     }
 }

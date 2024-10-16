@@ -12,4 +12,6 @@ module com.example.proyectoud1_metapi {
 
     opens com.example.proyectoud1_metapi to javafx.fxml;
     exports com.example.proyectoud1_metapi;
+    exports com.example.proyectoud1_metapi.Model;
+    exports org.example.Model;
 }
