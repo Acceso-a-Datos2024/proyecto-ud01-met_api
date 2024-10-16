@@ -24,11 +24,13 @@
     <!-- Campo de contraseña -->
     <PasswordField fx:id="passwordField" promptText="Contraseña"/>
 
+    <!-- Etiqueta para mostrar mensajes como error o éxito -->
+    <Label fx:id="messageLabel" text="" />
+
     <!-- Botón para enviar el formulario -->
     <Button text="Acceder" onAction="#validarCredenciales"/>
 
-    <!-- Etiqueta para mostrar mensajes como error o éxito -->
-    <Label fx:id="messageLabel" text="" />
+
 
 </VBox>
 

@@ -18,7 +18,7 @@ public class HelloApplication extends Application {
     public void start(Stage primaryStage) throws IOException {
         stage = primaryStage;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("acceso.fxml"));
-        scene = new Scene(fxmlLoader.load(), 320, 240);
+        scene = new Scene(fxmlLoader.load(), 550, 240);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
@@ -28,7 +28,7 @@ public class HelloApplication extends Application {
     static void setRoot(String fxml) throws IOException {
         Parent root = loadFXML(fxml);
         scene.setRoot(loadFXML(fxml));
-        stage.setWidth(640);  
+        stage.setWidth(640);
         stage.setHeight(480);
     }
 
