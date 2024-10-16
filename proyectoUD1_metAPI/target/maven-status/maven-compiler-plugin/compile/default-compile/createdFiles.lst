@@ -1,0 +1,12 @@
+com/example/proyectoud1_metapi/Model/test.class
+com/example/proyectoud1_metapi/Model/Tag.class
+org/example/Model/ElementMeasurements.class
+com/example/proyectoud1_metapi/HelloController.class
+com/example/proyectoud1_metapi/Model/ResponseList.class
+com/example/proyectoud1_metapi/Model/ApiRequester.class
+com/example/proyectoud1_metapi/AccesoController.class
+com/example/proyectoud1_metapi/ByeController.class
+module-info.class
+com/example/proyectoud1_metapi/Model/Measurement.class
+com/example/proyectoud1_metapi/Model/ArtPiece.class
+com/example/proyectoud1_metapi/HelloApplication.class
