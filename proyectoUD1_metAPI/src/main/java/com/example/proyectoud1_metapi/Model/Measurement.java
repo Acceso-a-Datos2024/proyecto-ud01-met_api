@@ -1,5 +1,5 @@
 
-package org.example.Model;
+package com.example.proyectoud1_metapi.Model;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -7,13 +7,14 @@ import javax.annotation.processing.Generated;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.example.Model.ElementMeasurements;
 
 @Generated("jsonschema2pojo")
 public class Measurement {
 
     private String elementName;
     private String elementDescription;
-    private ElementMeasurements elementMeasurements;
+    private org.example.Model.ElementMeasurements elementMeasurements;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
@@ -24,7 +25,7 @@ public class Measurement {
     public Measurement() {
     }
 
-    public Measurement(String elementName, String elementDescription, ElementMeasurements elementMeasurements) {
+    public Measurement(String elementName, String elementDescription, org.example.Model.ElementMeasurements elementMeasurements) {
         super();
         this.elementName = elementName;
         this.elementDescription = elementDescription;

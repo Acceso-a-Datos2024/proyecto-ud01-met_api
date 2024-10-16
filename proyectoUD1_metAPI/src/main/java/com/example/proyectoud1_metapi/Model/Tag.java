@@ -1,5 +1,5 @@
 
-package org.example.Model;
+package com.example.proyectoud1_metapi.Model;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

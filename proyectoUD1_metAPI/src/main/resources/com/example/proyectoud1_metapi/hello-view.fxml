@@ -13,4 +13,7 @@
 
     <Label fx:id="welcomeText"/>
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
+
+    <Label fx:id="cambiar"/>
+    <Button text="Cambia la escena!" onAction="#helloCambiar"/>
 </VBox>

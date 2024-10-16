@@ -1,5 +1,5 @@
 
-package org.example.Model;
+package com.example.proyectoud1_metapi.Model;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -10,6 +10,8 @@ import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.example.proyectoud1_metapi.Model.Measurement;
+import com.example.proyectoud1_metapi.Model.Tag;
 
 @Generated("jsonschema2pojo")
 public class ArtPiece {
