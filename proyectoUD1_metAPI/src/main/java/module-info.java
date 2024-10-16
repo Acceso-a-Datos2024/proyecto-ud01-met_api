@@ -7,8 +7,8 @@ module com.example.proyectoud1_metapi {
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
     requires java.compiler;
-    requires com.fasterxml.jackson.annotation;
     requires java.net.http;
+    requires com.fasterxml.jackson.databind;
 
     opens com.example.proyectoud1_metapi to javafx.fxml;
     exports com.example.proyectoud1_metapi;

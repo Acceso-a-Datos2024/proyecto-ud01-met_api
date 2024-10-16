@@ -1,8 +1,8 @@
 package com.example.proyectoud1_metapi.Model;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.http.HttpRequest;
+import java.io.IOException;
+import java.net.URL;
 
 public class ApiRequester {
     private String baseURL= "https://collectionapi.metmuseum.org/public/collection/v1/objects";
@@ -16,12 +16,10 @@ public class ApiRequester {
     public int getTotalNumberOfArtPieces() {
         int total = -1;
         try {
-            HttpRequest request = HttpRequest.newBuilder().uri(new URI(baseURL))
-                    .GET()
-                    .build();
-            String response = request.toString();
-            System.out.println(request);
-        } catch (URISyntaxException e) {
+            ObjectMapper mapper = new ObjectMapper();
+            ResponseList response = mapper.readValue(new URL(baseURL), ResponseList.class);
+            response.getObjectIDs().stream().forEach(System.out::println);
+        } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
         return total;
