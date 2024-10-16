@@ -11,11 +11,14 @@ import java.io.IOException;
 public class HelloApplication extends Application {
 
     private static Scene scene;
+    private static Stage stage;  // Almacenar referencia al Stage principal
+
 
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        scene = new Scene(fxmlLoader.load(), 320, 240);
+    public void start(Stage primaryStage) throws IOException {
+        stage = primaryStage;
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("acceso.fxml"));
+        scene = new Scene(fxmlLoader.load(), 550, 240);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
@@ -23,7 +26,10 @@ public class HelloApplication extends Application {
 
 
     static void setRoot(String fxml) throws IOException {
+        Parent root = loadFXML(fxml);
         scene.setRoot(loadFXML(fxml));
+        stage.setWidth(640);
+        stage.setHeight(480);
     }
 
 
