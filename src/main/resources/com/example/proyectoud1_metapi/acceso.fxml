@@ -6,31 +6,27 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Button?>
 
-
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.proyectoud1_metapi.AccesoController">
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="com.example.proyectoud1_metapi.AccesoController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
     <!-- Etiqueta para el título del formulario -->
-    <Label text="Login Form"/>
+    <Label text="Login Form" />
 
     <!-- Campo de texto para el nombre de usuario -->
-    <TextField fx:id="usernameField" promptText="Usuario"/>
+    <TextField fx:id="usernameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="180.0" promptText="Usuario" />
 
     <!-- Campo de contraseña -->
-    <PasswordField fx:id="passwordField" promptText="Contraseña"/>
+    <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="180.0" promptText="Contraseña" />
 
     <!-- Etiqueta para mostrar mensajes como error o éxito -->
     <Label fx:id="messageLabel" text="" />
 
     <!-- Botón para enviar el formulario -->
-    <Button text="Acceder" onAction="#validarCredenciales"/>
+    <Button onAction="#validarCredenciales" text="Acceder" />
 
 
 
 </VBox>
-

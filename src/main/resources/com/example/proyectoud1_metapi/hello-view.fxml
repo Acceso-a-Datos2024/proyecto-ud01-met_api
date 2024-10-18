@@ -6,22 +6,25 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="506.0" prefWidth="497.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectoud1_metapi.HelloController">
+<VBox alignment="TOP_CENTER" prefHeight="551.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectoud1_metapi.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets bottom="30.0" left="50.0" right="50.0" top="20.0" />
     </padding>
 
     <!---Titulo y subtitulo-->
    <Label alignment="CENTER" prefHeight="38.0" prefWidth="194.0" text="MET API">
       <font>
-         <Font name="Century" size="30.0" />
+         <Font name="Lucida Bright Demibold" size="30.0" />
       </font>
       <VBox.margin>
          <Insets bottom="10.0" top="10.0" />
@@ -37,7 +40,7 @@
    </Label>
 
     <!--GridPane de elementos busqueda -->
-   <GridPane alignment="CENTER" hgap="10.0" vgap="10.0">
+   <GridPane alignment="CENTER" hgap="10.0" prefHeight="62.0" prefWidth="532.0" vgap="10.0">
      <columnConstraints>
        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -62,42 +65,52 @@
    </GridPane>
 
     <!---Separador horizontal-->
-   <Separator prefWidth="200.0" />
-
-    <!---Obra not found-->
-   <Label fx:id="obraNotFound" text="No se encontró la obra" visible="false">
+   <Separator prefWidth="200.0">
       <VBox.margin>
-         <Insets top="20.0" />
-      </VBox.margin>
-   </Label>
+         <Insets bottom="20.0" />
+      </VBox.margin></Separator>
 
-    <!---Grid Pane con datos-->
-   <GridPane fx:id="gridData" prefHeight="178.0" prefWidth="458.0" visible="false">
-     <columnConstraints>
-       <ColumnConstraints hgrow="SOMETIMES" maxWidth="259.40000915527344" minWidth="10.0" prefWidth="259.40000915527344" />
-       <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.20001220703125" minWidth="10.0" prefWidth="99.40001220703124" />
-         <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.20001220703125" minWidth="10.0" prefWidth="97.79998779296875" />
-     </columnConstraints>
-     <rowConstraints>
-       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-     </rowConstraints>
+                                  <!---Obra not found-->
+   <Label fx:id="obraNotFound" text="No se encontró la obra" visible="false" />
+   <HBox fx:id="layoutData" alignment="CENTER" prefHeight="278.0" prefWidth="579.0" spacing="20.0" visible="false">
       <children>
-          <ImageView fx:id="imagenObra" fitHeight="181.0" fitWidth="229.0" pickOnBounds="true" preserveRatio="true" GridPane.rowSpan="2147483647" />
-      
-          <Label fx:id="nombreObra" text="Nombre Obra" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-            <font>
-               <Font size="20.0" />
-            </font>
-         </Label>
-          <Label fx:id="anioObra" text="Año Obra" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="TOP" />
-          <Label fx:id="nombreAutor" text="Nombre autor" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
-          <Label fx:id="medioObra" text="Medio Obra" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+         <ImageView fx:id="imagenObra" fitHeight="267.0" fitWidth="707.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../../../../../../../Downloads/Ilustración_sin_título.jpg" />
+            </image>
+         </ImageView>
+         <AnchorPane>
+            <children>
+            
+                                  <!---Grid Pane con datos-->
+               <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="252.0">
+                 <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.7999755859375" minWidth="10.0" prefWidth="108.7999605178833" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.6000045776366" minWidth="10.0" prefWidth="144.00003948211668" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints maxHeight="70.60001220703126" minHeight="10.0" prefHeight="29.599951171875" vgrow="SOMETIMES" />
+                   <RowConstraints maxHeight="116.8000244140625" minHeight="0.0" prefHeight="24.600048828124997" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                  <children>
+                  
+                                                                <Label fx:id="nombreObra" text="Nombre Obra" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                        <font>
+                           <Font name="Lucida Bright Demibold" size="20.0" />
+                        </font>
+                     </Label>
+                      <Label fx:id="anioObra" text="Año Obra" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                      <Label fx:id="nombreAutor" text="Nombre autor" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                  </children>
+               </GridPane>
+                <Label fx:id="medioObra" alignment="BOTTOM_LEFT" layoutY="219.0" prefHeight="53.0" prefWidth="230.0" text="Medio Obra" wrapText="true" />
+               <Label fx:id="imagenTexto" layoutX="70.0" layoutY="131.0" text="Imagen no disponible" visible="false">
+                  <font>
+                     <Font name="System Italic" size="12.0" />
+                  </font>
+               </Label>
+            </children>
+         </AnchorPane>
       </children>
-      <VBox.margin>
-         <Insets />
-      </VBox.margin>
-   </GridPane>
-    <Label fx:id="imagenTexto" text="No hay imagen disponible." visible="false" />
+   </HBox>
 </VBox>

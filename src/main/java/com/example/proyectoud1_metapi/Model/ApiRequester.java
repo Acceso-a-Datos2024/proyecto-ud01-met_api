@@ -83,17 +83,19 @@ public class ApiRequester {
 
             ObjectMapper mapper = new ObjectMapper();
             ResponseList response = mapper.readValue(new URL(urlSearch.concat("?q=").concat(etiqueta)), ResponseList.class);
-            if (response.getObjectIDs() != null && !response.getObjectIDs().isEmpty()) {
-            int firstId = response.getObjectIDs().get(0);
-            System.out.println(firstId);
-            URL artPieceUrl = new URL(baseURL.concat("/").concat(String.valueOf(firstId)));
 
-            artPiece = mapper.readValue(artPieceUrl, ArtPiece.class);
-            System.out.println(artPiece);
+            if (response.getObjectIDs() != null && !response.getObjectIDs().isEmpty()) {
+                int firstId = response.getObjectIDs().get(0);
+                System.out.println(firstId);
+                URL artPieceUrl = new URL(baseURL.concat("/").concat(String.valueOf(firstId)));
+
+                artPiece = mapper.readValue(artPieceUrl, ArtPiece.class);
+                System.out.println(artPiece);
             }else{
                 System.out.println("No se encontró ninguna obra para la etiqueta: " + etiqueta);
                 return null;
             }
+
         } catch (MalformedURLException e) {
             System.out.println("Error: " + e.getMessage());
             return null;

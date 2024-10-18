@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,7 +21,10 @@ public class HelloApplication extends Application {
         stage = primaryStage;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("acceso.fxml"));
         scene = new Scene(fxmlLoader.load(), 550, 240);
-        stage.setTitle("Hello!");
+
+        Image icon= new Image(getClass().getResource("/Icon/icon.png").toExternalForm());
+        stage.getIcons().add(icon);
+        stage.setTitle("proyecto-ud01-met_api");
         stage.setScene(scene);
         stage.show();
     }
@@ -27,9 +32,12 @@ public class HelloApplication extends Application {
 
     static void setRoot(String fxml) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource(fxml + ".fxml"));
+        stage.setOpacity(0);
         scene.setRoot(root);
         stage.setWidth(920);
         stage.setHeight(720);
+        stage.centerOnScreen();
+        stage.setOpacity(1);
     }
 
 

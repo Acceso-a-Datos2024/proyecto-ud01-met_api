@@ -8,7 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,7 +28,7 @@ public class HelloController {
     private ImageView imagenObra;
 
     @FXML
-    private GridPane gridData;
+    private HBox layoutData;
     @FXML
     private Label anioObra;
 
@@ -73,12 +75,13 @@ public class HelloController {
     protected void buscarObra() throws IOException {
         //Quitamos el aviso de obra no encontrada que pueda haberse quedado de la anterior busqueda
         obraNotFound.setVisible(false);
+        imagenTexto.setVisible(false);
 
         ApiRequester requester = new ApiRequester();
         ArtPiece artPiece = requester.getSearchArtPiece(etiquetaBusqueda.getText());
 
         if (artPiece != null) {
-            gridData.setVisible(true);
+            layoutData.setVisible(true);
 
             nombreObra.setText(artPiece.getTitle());
             anioObra.setText(artPiece.getObjectDate());
