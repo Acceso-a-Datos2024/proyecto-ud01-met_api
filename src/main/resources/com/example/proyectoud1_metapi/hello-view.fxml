@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,18 +17,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="551.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectoud1_metapi.HelloController">
-    <padding>
-        <Insets bottom="30.0" left="50.0" right="50.0" top="20.0" />
-    </padding>
 
-    <!---Titulo y subtitulo-->
+<VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectoud1_metapi.HelloController">
+   <ToolBar prefHeight="40.0" prefWidth="200.0">
+     <items>
+       <Button mnemonicParsing="false" text="Button" />
+     </items>
+   </ToolBar>
+
+                                        <!---Titulo y subtitulo-->
    <Label alignment="CENTER" prefHeight="38.0" prefWidth="194.0" text="MET API">
       <font>
          <Font name="Lucida Bright Demibold" size="30.0" />
       </font>
       <VBox.margin>
-         <Insets bottom="10.0" top="10.0" />
+         <Insets bottom="10.0" top="30.0" />
       </VBox.margin>
    </Label>
    <Label alignment="CENTER" prefHeight="18.0" prefWidth="346.0" text="Descubre la gran colección del Museo Metropolitano de Arte" textFill="#7b7b7b">
@@ -39,7 +43,7 @@
       </font>
    </Label>
 
-    <!--GridPane de elementos busqueda -->
+                                        <!--GridPane de elementos busqueda -->
    <GridPane alignment="CENTER" hgap="10.0" prefHeight="62.0" prefWidth="532.0" vgap="10.0">
      <columnConstraints>
        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -52,37 +56,38 @@
      </rowConstraints>
       <children>
       
-      
+                                          
           <TextField fx:id="etiquetaBusqueda" promptText="etiqueta de busqueda" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
       
-          <ComboBox fx:id="departamentosBusqueda" promptText="Departamento" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                              <ComboBox fx:id="departamentosBusqueda" promptText="Departamento" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
           <Button onAction="#buscarObra" text="Buscar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
          <TextField promptText="Autor" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
       </children>
       <VBox.margin>
-         <Insets bottom="20.0" />
+         <Insets bottom="20.0" left="50.0" right="50.0" />
       </VBox.margin>
    </GridPane>
 
-    <!---Separador horizontal-->
+                                        <!---Separador horizontal-->
    <Separator prefWidth="200.0">
       <VBox.margin>
-         <Insets bottom="20.0" />
-      </VBox.margin></Separator>
+         <Insets bottom="20.0" left="50.0" right="50.0" />
+      </VBox.margin>
+   </Separator>
 
-                                  <!---Obra not found-->
+                                                                      <!---Obra not found-->
    <Label fx:id="obraNotFound" text="No se encontró la obra" visible="false" />
-   <HBox fx:id="layoutData" alignment="CENTER" prefHeight="278.0" prefWidth="579.0" spacing="20.0" visible="false">
+   <HBox fx:id="layoutData" alignment="CENTER" prefHeight="278.0" prefWidth="579.0" spacing="20.0">
       <children>
          <ImageView fx:id="imagenObra" fitHeight="267.0" fitWidth="707.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../../../../../../Downloads/Ilustración_sin_título.jpg" />
+               <Image url="@../../../Icon/placeHolder.jpg" />
             </image>
          </ImageView>
          <AnchorPane>
             <children>
             
-                                  <!---Grid Pane con datos-->
+                                                                      <!---Grid Pane con datos-->
                <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="252.0">
                  <columnConstraints>
                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.7999755859375" minWidth="10.0" prefWidth="108.7999605178833" />
@@ -94,7 +99,7 @@
                  </rowConstraints>
                   <children>
                   
-                                                                <Label fx:id="nombreObra" text="Nombre Obra" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                                                                    <Label fx:id="nombreObra" text="Nombre Obra" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                         <font>
                            <Font name="Lucida Bright Demibold" size="20.0" />
                         </font>
@@ -112,5 +117,8 @@
             </children>
          </AnchorPane>
       </children>
+      <opaqueInsets>
+         <Insets left="50.0" right="50.0" />
+      </opaqueInsets>
    </HBox>
 </VBox>

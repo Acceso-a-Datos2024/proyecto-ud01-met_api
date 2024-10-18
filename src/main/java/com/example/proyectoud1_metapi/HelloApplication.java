@@ -35,7 +35,7 @@ public class HelloApplication extends Application {
         stage.setOpacity(0);
         scene.setRoot(root);
         stage.setWidth(920);
-        stage.setHeight(720);
+        stage.setHeight(650);
         stage.centerOnScreen();
         stage.setOpacity(1);
     }
