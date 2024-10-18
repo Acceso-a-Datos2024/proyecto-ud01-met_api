@@ -11,11 +11,13 @@ import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class ApiRequester {
     private String baseURL= "https://collectionapi.metmuseum.org/public/collection/v1/objects";
     private String urlSearch= "https://collectionapi.metmuseum.org/public/collection/v1/search";
+    private String urlDepartaments= "https://collectionapi.metmuseum.org/public/collection/v1/departments";
 
     public ApiRequester() {}
 
@@ -71,6 +73,8 @@ public class ApiRequester {
         }
         return total;
     }
+
+
 
 
     public ArtPiece getSearchArtPiece(String etiqueta) throws MalformedURLException {

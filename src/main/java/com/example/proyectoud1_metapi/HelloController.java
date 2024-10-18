@@ -3,6 +3,7 @@ package com.example.proyectoud1_metapi;
 import com.example.proyectoud1_metapi.Model.ApiRequester;
 import com.example.proyectoud1_metapi.Model.ArtPiece;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -26,6 +27,8 @@ public class HelloController {
     @FXML
     private Label añoObra;
 
+    @FXML
+    private ComboBox departamentosBusqueda;
 
     @FXML
     private Label medioObra;
@@ -41,6 +44,14 @@ public class HelloController {
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
+
+
+    public void initialize() {
+       
+
+    }
+
+
     @FXML
     protected void helloCambiar() throws IOException {
         HelloApplication.setRoot("bye-view");

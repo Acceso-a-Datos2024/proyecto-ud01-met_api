@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
+
+
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.proyectoud1_metapi.HelloController">
     <padding>
@@ -18,6 +20,8 @@
 
 
     <TextField fx:id="etiquetaBusqueda" promptText="etiqueta de busqueda"/>
+
+    <ComboBox fx:id="departamentosBusqueda" promptText="Seleccione una departamento" />
     <Button text="Buscar" onAction="#buscarObra"/>
 
     <Label fx:id="nombreObra"/>
