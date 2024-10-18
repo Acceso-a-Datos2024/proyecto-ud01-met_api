@@ -8,4 +8,11 @@ public class Response{
 	public List<Departments> getDepartments(){
 		return departments;
 	}
+
+	public void setDepartments(List<Departments> departments) {
+		this.departments = departments;
+	}
+
+
+
 }
