@@ -23,7 +23,7 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
+    ///asgdjafs
 
     static void setRoot(String fxml) throws IOException {
         Parent root = loadFXML(fxml);
