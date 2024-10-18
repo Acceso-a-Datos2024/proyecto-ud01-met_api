@@ -28,8 +28,8 @@ public class HelloApplication extends Application {
     static void setRoot(String fxml) throws IOException {
         Parent root = loadFXML(fxml);
         scene.setRoot(loadFXML(fxml));
-        stage.setWidth(640);
-        stage.setHeight(480);
+        stage.setWidth(920);
+        stage.setHeight(720);
     }
 
 

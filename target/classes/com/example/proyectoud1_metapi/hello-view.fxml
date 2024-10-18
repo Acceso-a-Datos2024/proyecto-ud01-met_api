@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.TextField?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
@@ -23,6 +24,8 @@
     <Label fx:id="añoObra"/>
     <Label fx:id="medioObra"/>
     <Label fx:id="nombreAutor"/>
+    <Label fx:id="imagenTexto" text="No hay imagen disponible." visible="false"/>
+    <ImageView fx:id="imagenObra" fitHeight="150.0" fitWidth="200.0" layoutX="61.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true"/>
 
     <Label fx:id="cambiar"/>
     <Button text="Cambia la escena!" onAction="#helloCambiar"/>
