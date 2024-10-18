@@ -24,11 +24,18 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+
     static void setRoot(String fxml) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource(fxml + ".fxml"));
         scene.setRoot(root);
         stage.setWidth(640);
         stage.setHeight(480);
+    }
+
+
+    private static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxml + ".fxml"));
+        return fxmlLoader.load();
     }
 
     public static void main(String[] args) {

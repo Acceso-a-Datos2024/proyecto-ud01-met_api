@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
+
+
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.proyectoud1_metapi.HelloController">
     <padding>
@@ -13,6 +17,19 @@
 
     <Label fx:id="welcomeText"/>
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
+
+
+    <TextField fx:id="etiquetaBusqueda" promptText="etiqueta de busqueda"/>
+
+    <ComboBox fx:id="departamentosBusqueda" promptText="Seleccione una departamento" />
+    <Button text="Buscar" onAction="#buscarObra"/>
+
+    <Label fx:id="nombreObra"/>
+    <Label fx:id="añoObra"/>
+    <Label fx:id="medioObra"/>
+    <Label fx:id="nombreAutor"/>
+    <Label fx:id="imagenTexto" text="No hay imagen disponible." visible="false"/>
+    <ImageView fx:id="imagenObra" fitHeight="150.0" fitWidth="200.0" layoutX="61.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true"/>
 
     <Label fx:id="cambiar"/>
     <Button text="Cambia la escena!" onAction="#helloCambiar"/>

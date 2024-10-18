@@ -1,5 +1,7 @@
 package com.example.proyectoud1_metapi.Model;
 
+import com.fasterxml.jackson.core.exc.StreamReadException;
+import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
@@ -9,10 +11,13 @@ import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class ApiRequester {
     private String baseURL= "https://collectionapi.metmuseum.org/public/collection/v1/objects";
+    private String urlSearch= "https://collectionapi.metmuseum.org/public/collection/v1/search";
+    private String urlDepartaments= "https://collectionapi.metmuseum.org/public/collection/v1/departments";
 
     public ApiRequester() {}
 
@@ -67,5 +72,36 @@ public class ApiRequester {
             System.out.println("Error: " + e.getMessage());
         }
         return total;
+    }
+
+
+
+
+    public ArtPiece getSearchArtPiece(String etiqueta) throws MalformedURLException {
+        ArtPiece artPiece = new ArtPiece();
+        try{
+
+            ObjectMapper mapper = new ObjectMapper();
+            ResponseList response = mapper.readValue(new URL(urlSearch.concat("?q=").concat(etiqueta)), ResponseList.class);
+            if (response.getObjectIDs() != null && !response.getObjectIDs().isEmpty()) {
+            int firstId = response.getObjectIDs().get(0);
+            System.out.println(firstId);
+            URL artPieceUrl = new URL(baseURL.concat("/").concat(String.valueOf(firstId)));
+
+            artPiece = mapper.readValue(artPieceUrl, ArtPiece.class);
+            System.out.println(artPiece);
+            }else{
+                System.out.println("No se encontró ninguna obra para la etiqueta: " + etiqueta);
+                return null;
+            }
+        } catch (MalformedURLException e) {
+            System.out.println("Error: " + e.getMessage());
+            return null;
+        }catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+            return null;
+        }
+        return artPiece;
+
     }
 }
