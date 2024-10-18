@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.TextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
@@ -13,6 +14,15 @@
 
     <Label fx:id="welcomeText"/>
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
+
+
+    <TextField fx:id="etiquetaBusqueda" promptText="etiqueta de busqueda"/>
+    <Button text="Buscar" onAction="#buscarObra"/>
+
+    <Label fx:id="nombreObra"/>
+    <Label fx:id="añoObra"/>
+    <Label fx:id="medioObra"/>
+    <Label fx:id="nombreAutor"/>
 
     <Label fx:id="cambiar"/>
     <Button text="Cambia la escena!" onAction="#helloCambiar"/>

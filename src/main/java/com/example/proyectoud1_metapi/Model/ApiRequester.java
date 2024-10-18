@@ -1,5 +1,7 @@
 package com.example.proyectoud1_metapi.Model;
 
+import com.fasterxml.jackson.core.exc.StreamReadException;
+import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
@@ -13,6 +15,7 @@ import java.util.Random;
 
 public class ApiRequester {
     private String baseURL= "https://collectionapi.metmuseum.org/public/collection/v1/objects";
+    private String urlSearch= "https://collectionapi.metmuseum.org/public/collection/v1/search";
 
     public ApiRequester() {}
 
@@ -67,5 +70,27 @@ public class ApiRequester {
             System.out.println("Error: " + e.getMessage());
         }
         return total;
+    }
+
+
+    public ArtPiece getSearchArtPiece(String etiqueta) throws MalformedURLException {
+        ArtPiece artPiece = new ArtPiece();
+        try{
+
+            ObjectMapper mapper = new ObjectMapper();
+            ResponseList response = mapper.readValue(new URL(urlSearch.concat("?q=").concat(etiqueta)), ResponseList.class);
+            int firstId = response.getObjectIDs().get(0);
+            System.out.println(firstId);
+            URL artPieceUrl = new URL(baseURL.concat("/").concat(String.valueOf(firstId)));
+
+            artPiece = mapper.readValue(artPieceUrl, ArtPiece.class);
+            System.out.println(artPiece);
+        } catch (MalformedURLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        return artPiece;
+
     }
 }
