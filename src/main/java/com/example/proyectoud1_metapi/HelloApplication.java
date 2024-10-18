@@ -26,17 +26,12 @@ public class HelloApplication extends Application {
 
 
     static void setRoot(String fxml) throws IOException {
-        Parent root = loadFXML(fxml);
-        scene.setRoot(loadFXML(fxml));
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource(fxml + ".fxml"));
+        scene.setRoot(root);
         stage.setWidth(920);
         stage.setHeight(720);
     }
 
-
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
-    }
 
     public static void main(String[] args) {
         launch();

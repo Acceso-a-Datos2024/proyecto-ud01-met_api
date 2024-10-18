@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
+import javafx.scene.layout.GridPane;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,8 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
+
     @FXML
     private Label imagenTexto;
 
@@ -25,9 +25,10 @@ public class HelloController {
     @FXML
     private ImageView imagenObra;
 
-
     @FXML
-    private Label añoObra;
+    private GridPane gridData;
+    @FXML
+    private Label anioObra;
 
     @FXML
     private ComboBox departamentosBusqueda;
@@ -37,15 +38,12 @@ public class HelloController {
 
     @FXML
     private Label nombreAutor;
+    @FXML
+    private Label obraNotFound;
 
 
     @FXML
     private TextField etiquetaBusqueda;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
 
 
     public void initialize() {
@@ -55,6 +53,7 @@ public class HelloController {
         departamentosBusqueda.getItems().addAll(departamentos);
 
     }
+
     private List<Departments> getDepartmentsFromJson(){
         List<Departments> departments = new ArrayList<>();
         try {
@@ -71,23 +70,27 @@ public class HelloController {
     }
 
     @FXML
-    protected void helloCambiar() throws IOException {
-        HelloApplication.setRoot("bye-view");
-    }
-
-    @FXML
     protected void buscarObra() throws IOException {
+        //Quitamos el aviso de obra no encontrada que pueda haberse quedado de la anterior busqueda
+        obraNotFound.setVisible(false);
+
         ApiRequester requester = new ApiRequester();
         ArtPiece artPiece = requester.getSearchArtPiece(etiquetaBusqueda.getText());
+
         if (artPiece != null) {
+            gridData.setVisible(true);
+
             nombreObra.setText(artPiece.getTitle());
-            añoObra.setText(artPiece.getObjectDate());
+            anioObra.setText(artPiece.getObjectDate());
             nombreAutor.setText(artPiece.getArtistDisplayName());
             medioObra.setText(artPiece.getMedium());
+
             String imageUrl = artPiece.getPrimaryImage(); // Obtener la URL de la imagen
+
             if (imageUrl != null && !imageUrl.trim().isEmpty()) {
-            Image imagen = new Image(artPiece.getPrimaryImage());
-            imagenObra.setImage(imagen);}
+                Image imagen = new Image(artPiece.getPrimaryImage());
+                imagenObra.setImage(imagen);
+            }
             else{
                 imagenObra.setImage(null); // Limpiar la imagen
                 imagenTexto.setText("No hay imagen disponible."); // Mostrar texto alternativo
@@ -95,10 +98,7 @@ public class HelloController {
             }
         }else {
             // Manejo de errores
-            nombreObra.setText("No se encontró la obra.");
-            añoObra.setText("");
-            nombreAutor.setText("");
-            medioObra.setText("");
+            obraNotFound.setVisible(true);
 
         }
 
