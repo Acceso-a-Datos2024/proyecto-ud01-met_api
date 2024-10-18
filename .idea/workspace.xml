@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f0680be-0946-482c-b49b-3e42aa717210" name="Changes" comment="Cambios interfaz login">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Icon/placeHolder.jpg" afterDir="false" />
+    <list default="true" id="2f0680be-0946-482c-b49b-3e42aa717210" name="Changes" comment="Ajuste dimensiones ventana">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Icon/export.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +81,7 @@
       <recent name="D:\Users\Sam\Desktop\Nueva carpeta\proyecto-ud01-met_api\src\main\resources\Icon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Sam\Desktop\Nueva carpeta\proyecto-ud01-met_api\src\main\resources\Icon" />
       <recent name="C:\Users\a22iagorg\Documents\GitHub\proyecto-ud01-met_api\src\main\resources" />
       <recent name="C:\Users\a22iagorg\Documents\GitHub\proyecto-ud01-met_api\src\main\resources\jsons" />
       <recent name="C:\Users\a22iagorg\Documents\GitHub\proyecto-ud01-met_api" />
@@ -212,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729273698050</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ajuste dimensiones ventana">
+      <option name="closed" value="true" />
+      <created>1729276023385</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729276023385</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +230,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cambios interfaz busqueda y controllers" />
     <MESSAGE value="Cambios interfaz login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios interfaz login" />
+    <MESSAGE value="Ajuste dimensiones ventana" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste dimensiones ventana" />
   </component>
 </project>

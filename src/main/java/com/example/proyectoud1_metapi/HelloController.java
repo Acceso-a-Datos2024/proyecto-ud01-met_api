@@ -8,16 +8,20 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class HelloController {
+
+    FileChooser fileChooser= new FileChooser();
 
     @FXML
     private Label imagenTexto;
@@ -105,6 +109,23 @@ public class HelloController {
 
         }
 
+    }
+
+    @FXML
+    void exportData(MouseEvent event) {
+        File file= fileChooser.showSaveDialog(new Stage());
+        if (file != null){
+            //saveSystem(file, datos);
+        }
+    }
+
+    public void saveSystem(File flie, String content){
+        try (PrintWriter writer = new PrintWriter(new FileWriter("example.txt"))) {
+            writer.println(content);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
