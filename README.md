@@ -26,7 +26,7 @@ En las siguientes capturas podemos ver distintas peticiones realizadas a la API 
 ![Captura de pantalla 2024-10-14 132126](https://github.com/user-attachments/assets/732e174e-65f4-4e98-8449-6bd8f2ecfe0f)
 
 
-# 2. Manual  técnico para desarrolladores (puede ser mediante capturas con explicaciones o vídeo tutorial*)
+# 2. Manual técnico para desarrolladores (puede ser mediante capturas con explicaciones o vídeo tutorial*)
 
 Esta aplicación está  diseñada para descubrir nuevas obras de arte dentro de la colección del Museo Metropolitano de Arte, no para consultar obras especificas, aunque el usuario podrá acotar los resultados para encontrar una pieza que coincida con sus intereses. 
 
