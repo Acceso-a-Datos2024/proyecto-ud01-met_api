@@ -7,7 +7,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
+<?import java.net.URL?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="com.example.proyectoud1_metapi.AccesoController">
+    <stylesheets>
+        <URL value="@styles/formulario.css" />
+    </stylesheets>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -22,7 +26,7 @@
     <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="180.0" promptText="Contraseña" />
 
     <!-- Etiqueta para mostrar mensajes como error o éxito -->
-    <Label fx:id="messageLabel" text="" />
+    <Label fx:id="messageLabel" styleClass="error-message"  text="" />
 
     <!-- Botón para enviar el formulario -->
     <Button onAction="#validarCredenciales" text="Acceder" />
