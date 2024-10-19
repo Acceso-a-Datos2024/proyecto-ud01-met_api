@@ -1,13 +1,13 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/JkDJUAAN)
 
 # Index
-- [1. Introducción al supuesto con descripción de la API y capturas POSTMAN](#1-introducción-al-supuesto-con-descripción-de-la-api-y-capturas-postman)
-- [2. Manual técnico para desarrolladores](#2-manual-técnico-para-desarrolladores-puede-ser-mediante-capturas-con-explicaciones-o-vídeo-tutorial) 
-- [3. Manual de usuario con juego de pruebas](#3-manual-de-usuario-con-juego-de-pruebas-puede-ser-mediante-capturas-con-explicaciones-o-vídeo-tutorial) 
-- [4. Explicación del reparto de las tareas](#4-explicación-del-reparto-de-las-tareas-entre-ambos-integrantes) 
-- [5. Extras realizados](#5-extras-realizados-solo-si-habéis-codificado-alguno) 
-- [6. Propuestas de mejora](#6-propuestas-de-mejora-nuevas-opciones-control-de-errores-) 
-- [7. Conclusiones y opinión](#7-conclusiones-y-opinión-del-trabajo-realizado-incluid-dedicación-temporal-y-cualificación-estimada)
+- [1. Introducción al supuesto con descripción de la API y capturas POSTMAN](#1.-introducción-al-supuesto-con-descripción-de-la-api-y-capturas-postman)
+- [2. Manual técnico para desarrolladores](#2.-manual-técnico-para-desarrolladores-puede-ser-mediante-capturas-con-explicaciones-o-vídeo-tutorial) 
+- [3. Manual de usuario con juego de pruebas](#3.-manual-de-usuario-con-juego-de-pruebas-puede-ser-mediante-capturas-con-explicaciones-o-vídeo-tutorial) 
+- [4. Explicación del reparto de las tareas](#4.-explicación-del-reparto-de-las-tareas-entre-ambos-integrantes) 
+- [5. Extras realizados](#5.-extras-realizados-solo-si-habéis-codificado-alguno) 
+- [6. Propuestas de mejora](#6.-propuestas-de-mejora-nuevas-opciones-control-de-errores-) 
+- [7. Conclusiones y opinión](#7.-conclusiones-y-opinión-del-trabajo-realizado-incluid-dedicación-temporal-y-cualificación-estimada)
 
 ---
 
