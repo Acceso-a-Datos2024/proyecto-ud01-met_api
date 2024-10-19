@@ -18,13 +18,13 @@ import javafx.stage.Stage;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class HelloController {
 
     FileChooser fileChooser= new FileChooser();
+    ArtPiece artPiece;
 
-    @FXML
-    private Label imagenTexto;
 
     @FXML
     private Label nombreObra;
@@ -79,17 +79,21 @@ public class HelloController {
     protected void buscarObra() throws IOException {
         //Quitamos el aviso de obra no encontrada que pueda haberse quedado de la anterior busqueda
         obraNotFound.setVisible(false);
-        imagenTexto.setVisible(false);
 
         ApiRequester requester = new ApiRequester();
-        ArtPiece artPiece = requester.getSearchArtPiece(etiquetaBusqueda.getText());
+        artPiece = requester.getSearchArtPiece(etiquetaBusqueda.getText());
 
         if (artPiece != null) {
             layoutData.setVisible(true);
 
             nombreObra.setText(artPiece.getTitle());
             anioObra.setText(artPiece.getObjectDate());
-            nombreAutor.setText(artPiece.getArtistDisplayName());
+            if (artPiece.getArtistDisplayName().isEmpty() || artPiece.getArtistDisplayName()== null ){
+                nombreAutor.setText("No known author");
+            }
+            else {
+                nombreAutor.setText(artPiece.getArtistDisplayName());
+            }
             medioObra.setText(artPiece.getMedium());
 
             String imageUrl = artPiece.getPrimaryImage(); // Obtener la URL de la imagen
@@ -99,9 +103,7 @@ public class HelloController {
                 imagenObra.setImage(imagen);
             }
             else{
-                imagenObra.setImage(null); // Limpiar la imagen
-                imagenTexto.setText("No hay imagen disponible."); // Mostrar texto alternativo
-                imagenTexto.setVisible(true);
+                imagenObra.setImage(new Image(getClass().getResource("/Icon/No-Image-Placeholder.png").toExternalForm())); // Limpiar la imagen
             }
         }else {
             // Manejo de errores
@@ -113,14 +115,22 @@ public class HelloController {
 
     @FXML
     void exportData(MouseEvent event) {
+        System.out.println("boton pulsado");
         File file= fileChooser.showSaveDialog(new Stage());
-        if (file != null){
-            //saveSystem(file, datos);
+        try {
+            String datos = artPiece.toShortString();
+            if (file != null){
+
+                saveSystem(file, datos);
+            }
+        } catch (Exception e) {
+            System.out.println("No hay datos que guardar");
         }
+
     }
 
-    public void saveSystem(File flie, String content){
-        try (PrintWriter writer = new PrintWriter(new FileWriter("example.txt"))) {
+    public void saveSystem(File file, String content){
+        try (PrintWriter writer = new PrintWriter(file)) {
             writer.println(content);
 
         } catch (IOException e) {

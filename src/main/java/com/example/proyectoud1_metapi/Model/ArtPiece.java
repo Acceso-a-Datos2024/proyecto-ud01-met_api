@@ -857,4 +857,8 @@ public class ArtPiece {
         return sb.toString();
     }
 
+    public String toShortString(){
+        return String.format("Titulo: %s \nAutor: %s\nAño: %s\nMedio: %s\nImagen: %s", getTitle(),
+                getArtistDisplayName(),getObjectDate(),getMedium(),getPrimaryImage());
+    }
 }
