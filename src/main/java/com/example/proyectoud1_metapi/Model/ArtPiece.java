@@ -16,6 +16,7 @@ import com.example.proyectoud1_metapi.Model.Tag;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
+/*Clase que represanta un objeto de una obra de arte obtenida de la API*/
 @Generated("jsonschema2pojo")
 @JacksonXmlRootElement(localName = "Artpiece")
 public class ArtPiece implements Serializable {

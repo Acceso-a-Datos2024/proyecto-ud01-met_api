@@ -20,6 +20,7 @@ import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.Random;
 
+/*Clase para realizar consultas a la API*/
 public class ApiRequester {
     private String baseURL= "https://collectionapi.metmuseum.org/public/collection/v1/objects";
     private String urlSearch= "https://collectionapi.metmuseum.org/public/collection/v1/search";
@@ -34,40 +35,40 @@ public class ApiRequester {
         int id = getRandomId();
         ObjectMapper mapper = new ObjectMapper();
         
-        if (this.objectsCache.existsId(Integer.toString(id))) {
+        if (this.objectsCache.existsId(Integer.toString(id))) { //Comprobamos si el id está en nuestra cache
             try {
                 artPiece = mapper.readValue(this.objectsCache.getCacheArchive().get(Integer.toString(id)), ArtPiece.class);
                 System.out.println("Objeto leído con éxito: " + artPiece.getObjectID());
-                return artPiece;
+                return artPiece;    //Devolvemos el objeto desde la cache
             } catch (JsonProcessingException ex){
                 System.out.println("Error lectura de caché objetos");
             }
         }
         
-        if (this.blacklistCache.existsId(Integer.toString(id))) {
+        if (this.blacklistCache.existsId(Integer.toString(id))) {   //Comporbamos si el id está en nuestra cache de ids no válidos
             System.out.println(id + " en la blacklist");
-            return getRandomArtPiece();
+            return getRandomArtPiece(); //Realizamos una búsqueda con otro id
         } else {
             try {
-                URL url = new URL(baseURL.concat("/").concat(String.valueOf(id)));
-                artPiece = mapper.readValue(url, ArtPiece.class);
+                URL url = new URL(baseURL.concat("/").concat(String.valueOf(id)));  //Construimos la url de nuestra request
+                artPiece = mapper.readValue(url, ArtPiece.class);   //Mapeamos la response de la API a la clase ArtPiece
             
                 JsonNode root = mapper.readTree(url);
-                this.objectsCache.add(root.findValue("objectID").asText(), root.toString());
+                this.objectsCache.add(root.findValue("objectID").asText(), root.toString());    //Guardamos el objeto en la cache con su id como clave
                 this.objectsCache.save();
             
-                if (artPiece.getPrimaryImage() == null || artPiece.getPrimaryImage().trim().isEmpty()) {
+                if (artPiece.getPrimaryImage() == null || artPiece.getPrimaryImage().trim().isEmpty()) {    //Comprobamos que la obra tiene o no una imagen disponible
                     System.out.println("Error imagen nula");
-                    artPiece = getRandomArtPiece();
+                    artPiece = getRandomArtPiece(); //REalizamos otra búsqueda
                 }
             
             } catch (MalformedURLException e) {
                 System.out.println("Error: " + e.getMessage());
-            } catch (IOException e) {
+            } catch (IOException e) {   //Error de lectura porque el id no tiene un objeto asociado
                 System.out.println("Error id vacío: " + e.getMessage());
-                this.blacklistCache.add(Integer.toString(id), Integer.toString(id));
+                this.blacklistCache.add(Integer.toString(id), Integer.toString(id));    //Alamcenamos el id en nuestra cache blacklist
                 this.blacklistCache.save();
-                artPiece = getRandomArtPiece();
+                artPiece = getRandomArtPiece(); //Realizamos otra búsqueda
             }
             return artPiece;
         }
@@ -79,6 +80,9 @@ public class ApiRequester {
     }
 
     public int getTotalNumberOfArtPieces() {
+        /*Antes de nada intentamos leer de la cache un archivo total.txt en el
+        que estará almacenado el total de objetos disponibles, si lo conseguimos
+        leer sacamos el total de ahí y nos ahorramos la siguiente consulta*/
         try (BufferedReader lector = new BufferedReader(new FileReader("src/main/resources/cache/total.txt"));) {
             System.out.println("Total leído de caché");
             return Integer.parseInt(lector.readLine());
@@ -86,11 +90,17 @@ public class ApiRequester {
             int total = -1;
             try {
                 ObjectMapper mapper = new ObjectMapper();
+                
+                //Realizamos una request para todos los objetos disponibles en la API
+                //Esto nos devolvera un JSON con un campo total (el total de objetos disponible) y una lista con todos los ids
+                //Mapeamos la response a nuestra clase ResponseList
                 ResponseList response = mapper.readValue(new URL(baseURL), ResponseList.class);
+                
+                //Obtenemos el total
                 total = response.getTotal();
                 
                 try (BufferedWriter escritor = new BufferedWriter(new FileWriter("src/main/resources/cache/total.txt"));) {
-                    escritor.write(String.valueOf(total));
+                    escritor.write(String.valueOf(total));  //Lo guardamos en cache, esta vez en un archivo de texto
                     System.out.println("Total guardado con éxtio en caché");
                 }
                 
