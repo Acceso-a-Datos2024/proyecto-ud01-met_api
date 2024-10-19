@@ -4,9 +4,7 @@ import com.example.proyectoud1_metapi.Model.ArtPiece;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 
 public class SaveSystem {
 
@@ -23,6 +21,10 @@ public class SaveSystem {
             case "xml":
                 saveAsXml(file, artPiece);
                 break;
+            case "bin":
+                saveAsBin(file, artPiece);
+                break;
+
             default:
                 System.out.println("Unsupported file format");
                 break;
@@ -70,6 +72,15 @@ public class SaveSystem {
             System.out.println("Archivo XML escrito con exito");
         } catch (IOException ex) {
             System.err.println(ex.getMessage());
+        }
+    }
+
+    private  static void saveAsBin(File file, ArtPiece artPiece){
+        try (ObjectOutputStream escritor = new ObjectOutputStream(new FileOutputStream(file))) {
+            escritor.writeObject(artPiece);
+            System.out.println("El archivo binario se ha escrito correctamente");
+        } catch (IOException ex) {
+            System.err.println(ex);
         }
     }
 }

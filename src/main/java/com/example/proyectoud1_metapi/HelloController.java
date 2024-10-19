@@ -111,14 +111,16 @@ public class HelloController {
     @FXML
     void exportData(MouseEvent event) {
         //Añadimos las extensiones disponibles
+        fileChooser.getExtensionFilters().clear();
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter(".txt", "*.txt"),
                 new FileChooser.ExtensionFilter(".json", "*.json"),
-                new FileChooser.ExtensionFilter(".xml", "*.xml")
+                new FileChooser.ExtensionFilter(".xml", "*.xml"),
+                new FileChooser.ExtensionFilter(".bin", "*.bin")
         );
 
         if (artPiece != null) {
-            fileChooser.setTitle(artPiece.getTitle()+"_"+artPiece.getArtistDisplayName());
+            fileChooser.setInitialFileName(artPiece.getTitle()+"_"+artPiece.getArtistDisplayName());
             File file = fileChooser.showSaveDialog(new Stage());
             if (file !=null){
                 SaveSystem.save(file, artPiece);

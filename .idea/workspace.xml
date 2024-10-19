@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f0680be-0946-482c-b49b-3e42aa717210" name="Changes" comment="Opcion exportar datos y retoques en la ui">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/SaveSystem.java" afterDir="false" />
+    <list default="true" id="2f0680be-0946-482c-b49b-3e42aa717210" name="Changes" comment="Exportar datos en txt json y xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/Model/ArtPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/Model/ArtPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/Model/ElementMeasurements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/Model/ElementMeasurements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/Model/Measurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/Model/Measurement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/Model/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/Model/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/SaveSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/SaveSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cache/objects.bin" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cache/objects.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cache/objects.bin" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cache/objects.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ArtPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ArtPiece.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729331841934</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Exportar datos en txt json y xml">
+      <option name="closed" value="true" />
+      <created>1729336706587</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729336706587</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +261,7 @@
     <MESSAGE value="Ajuste dimensiones ventana" />
     <MESSAGE value="Creando guardado de datos en txt" />
     <MESSAGE value="Opcion exportar datos y retoques en la ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="Opcion exportar datos y retoques en la ui" />
+    <MESSAGE value="Exportar datos en txt json y xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exportar datos en txt json y xml" />
   </component>
 </project>

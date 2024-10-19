@@ -1,6 +1,7 @@
 
 package com.example.proyectoud1_metapi.Model;
 
+import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.annotation.processing.Generated;
@@ -10,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.example.Model.ElementMeasurements;
 
 @Generated("jsonschema2pojo")
-public class Measurement {
+public class Measurement implements Serializable {
 
     private String elementName;
     private String elementDescription;

@@ -1,6 +1,7 @@
 
 package org.example.Model;
 
+import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.annotation.processing.Generated;
@@ -9,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Generated("jsonschema2pojo")
-public class ElementMeasurements {
+public class ElementMeasurements implements Serializable {
 
     private Double diameter;
     @JsonIgnore

@@ -1,6 +1,7 @@
 
 package com.example.proyectoud1_metapi.Model;
 
+import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.annotation.processing.Generated;
@@ -10,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Generated("jsonschema2pojo")
-public class Tag {
+public class Tag implements Serializable {
 
     private String term;
     @JsonProperty("AAT_URL")
