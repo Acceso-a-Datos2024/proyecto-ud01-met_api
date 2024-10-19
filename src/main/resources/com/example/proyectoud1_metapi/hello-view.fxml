@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.CheckBox?>
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
@@ -71,7 +72,7 @@
           <TextField fx:id="etiquetaBusqueda" promptText="etiqueta de busqueda" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
       
           <ComboBox fx:id="departamentosBusqueda" promptText="Departamento" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-          <CheckBox fx:id="obrasRecomendadasCheckBox" text="Obras recomendadas" GridPane.columnIndex="2" GridPane.halignment="center" GridPane.valignment="CENTER"  GridPane.rowIndex="0" />
+          <CheckBox fx:id="obrasRecomendadasCheckBox" text="Obras recomendadas" GridPane.columnIndex="2" GridPane.halignment="center" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
           <Button onAction="#buscarObra" text="Buscar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
 
       </children>
@@ -102,8 +103,8 @@
                                                                       <!---Grid Pane con datos-->
                <GridPane layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="230.0">
                  <columnConstraints>
-                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.7999755859375" minWidth="10.0" prefWidth="108.7999605178833" />
-                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.6000045776366" minWidth="10.0" prefWidth="144.00003948211668" />
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.7999755859375" minWidth="10.0" prefWidth="128.80005340576173" />
+                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.6000045776366" minWidth="10.0" prefWidth="100.79994659423829" />
                  </columnConstraints>
                  <rowConstraints>
                    <RowConstraints minHeight="10.0" prefHeight="29.599951171875" vgrow="SOMETIMES" />
@@ -111,14 +112,14 @@
                  </rowConstraints>
                   <children>
                   
-                     <Label fx:id="nombreObra" maxWidth="Infinity" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="350.0" wrapText="true"  GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <Label fx:id="nombreObra" alignment="TOP_LEFT" maxWidth="Infinity" prefHeight="60.0" prefWidth="350.0" wrapText="true" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                         <font>
                            <Font name="Lucida Bright Demibold" size="14.0" />
 
                         </font>
                      </Label>
-                      <Label fx:id="anioObra" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" prefHeight="47.0" prefWidth="52.0"  GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" />
-                      <Label fx:id="nombreAutor" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="76.0"  GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                      <Label fx:id="anioObra" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" prefHeight="47.0" prefWidth="52.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                      <Label fx:id="nombreAutor" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="115.0" GridPane.rowIndex="1" GridPane.valignment="TOP" />
                   </children>
                </GridPane>
                 <Label fx:id="medioObra" alignment="BOTTOM_LEFT" layoutY="219.0" prefHeight="53.0" prefWidth="230.0" text="Medio Obra" wrapText="true" />

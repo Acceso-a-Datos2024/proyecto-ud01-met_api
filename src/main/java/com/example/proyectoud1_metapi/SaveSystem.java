@@ -32,7 +32,7 @@ public class SaveSystem {
 
     }
 
-    private static String getFileExtension(File file) {
+    public static String getFileExtension(File file) {
         String fileName = file.getName();
         if (fileName.lastIndexOf(".") != -1) {
             return fileName.substring(fileName.lastIndexOf(".") + 1);
@@ -40,7 +40,7 @@ public class SaveSystem {
         return "";  // No extension found
     }
 
-    private static void saveAsText(File file, ArtPiece artPiece){
+    public static void saveAsText(File file, ArtPiece artPiece){
          String content= artPiece.toShortString();
 
          try (PrintWriter writer = new PrintWriter(file)) {
@@ -50,7 +50,7 @@ public class SaveSystem {
          }
     }
 
-    private static void saveAsJson(File file, ArtPiece artPiece){
+    public static void saveAsJson(File file, ArtPiece artPiece){
         // Usar ObjectMapper para pasar los objetos a formato JSON
         ObjectMapper mapper = new ObjectMapper();
 
@@ -63,7 +63,7 @@ public class SaveSystem {
         }
     }
 
-    private  static  void  saveAsXml(File file, ArtPiece artPiece){
+    public  static  void  saveAsXml(File file, ArtPiece artPiece){
         XmlMapper xmlMapper = new XmlMapper();
 
         try {
@@ -75,7 +75,7 @@ public class SaveSystem {
         }
     }
 
-    private  static void saveAsBin(File file, ArtPiece artPiece){
+    public  static void saveAsBin(File file, ArtPiece artPiece){
         try (ObjectOutputStream escritor = new ObjectOutputStream(new FileOutputStream(file))) {
             escritor.writeObject(artPiece);
             System.out.println("El archivo binario se ha escrito correctamente");

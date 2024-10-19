@@ -1,6 +1,9 @@
 package com.example.proyectoud1_metapi;
 
 import com.example.proyectoud1_metapi.Model.*;
+import com.fasterxml.jackson.core.exc.StreamReadException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -18,7 +21,7 @@ import java.util.List;
 public class HelloController {
 
     FileChooser fileChooser= new FileChooser();
-    ArtPiece artPiece;
+    static ArtPiece artPiece;
 
 
     @FXML
@@ -55,6 +58,45 @@ public class HelloController {
         // Agregar departamentos al ComboBox
         departamentosBusqueda.getItems().addAll(departamentos);
 
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            artPiece = objectMapper.readValue(new File("src/main/resources/saves/last_sesion.json"), new TypeReference<ArtPiece>() {});
+
+            Dialog dialog= new Dialog();
+            dialog.setTitle("Welcome!");  // Set the title of the dialog
+            dialog.setContentText("¿Quieres recuperar el estado de la última sesión?");  // Set the content text to display the message
+            dialog.getDialogPane().getButtonTypes().add(ButtonType.YES);
+            dialog.getDialogPane().getButtonTypes().add(ButtonType.NO);
+            dialog. showAndWait().ifPresent(response -> {
+                if (response == ButtonType.YES){
+                    cargarDatos();
+                }
+                else{
+                    artPiece=null;
+                }
+            });
+
+
+        } catch (Exception e) {
+            System.out.println("No se encontraron datos de sesiones anteriores");
+        }
+
+    }
+
+    public static void closing(){
+        if (artPiece != null){
+            System.out.println("Peticion cerrar");
+            Dialog dialog= new Dialog();
+            dialog.setTitle("Wait!");  // Set the title of the dialog
+            dialog.setContentText("¿Quieres guardar el estado de la sesión?");  // Set the content text to display the message
+            dialog.getDialogPane().getButtonTypes().add(ButtonType.YES);
+            dialog.getDialogPane().getButtonTypes().add(ButtonType.NO);
+            dialog. showAndWait().ifPresent(response -> {
+                if (response == ButtonType.YES){
+                    SaveSystem.saveAsJson(new File("src/main/resources/saves/last_sesion.json"),artPiece);
+                    System.out.println("Guardado estado");
+                } });
+        }
     }
 
     private List<Departments> getDepartmentsFromJson(){
@@ -89,6 +131,11 @@ public class HelloController {
             imagenObra.setImage(null);
 
             // Opcional: Mostrar un mensaje de error (puedes usar un Label o un Alert)
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Advertencia");
+            alert.setHeaderText(null);
+            alert.setContentText("El campo 'Etiqueta' es obligatorio");
+            alert.show();
             System.out.println("El campo 'Etiqueta' es obligatorio.");
 
             return; // Salir del método para no realizar la búsqueda
@@ -107,9 +154,12 @@ public class HelloController {
 
         boolean isHighlight = obrasRecomendadasCheckBox.isSelected();
 
-        ArtPiece artPiece = requester.getSearchArtPiece(etiqueta, departmentId, isHighlight);
+        artPiece = requester.getSearchArtPiece(etiqueta, departmentId, isHighlight);
 
+        cargarDatos();
+    }
 
+    public void cargarDatos(){
         if (artPiece != null) {
             layoutData.setVisible(true);
             nombreObra.setText(artPiece.getTitle());
@@ -140,7 +190,6 @@ public class HelloController {
             medioObra.setText("");
             imagenObra.setImage(null);
         }
-
     }
 
     @FXML

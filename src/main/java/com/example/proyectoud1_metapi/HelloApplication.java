@@ -26,6 +26,10 @@ public class HelloApplication extends Application {
         stage.getIcons().add(icon);
         stage.setTitle("proyecto-ud01-met_api");
         stage.setScene(scene);
+        stage.setOnCloseRequest(event -> {
+            HelloController.closing();
+
+        });
         stage.show();
     }
 
@@ -39,7 +43,6 @@ public class HelloApplication extends Application {
         stage.centerOnScreen();
         stage.setOpacity(1);
     }
-
 
     public static void main(String[] args) {
         launch();
