@@ -88,7 +88,7 @@
 
                                                                       <!---Obra not found-->
    <Label fx:id="obraNotFound" text="No se encontró la obra" visible="false" />
-   <HBox fx:id="layoutData" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="278.0" prefWidth="579.0" spacing="20.0">
+   <HBox fx:id="layoutData" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="278.0" prefWidth="579.0" spacing="20.0" visible="false">
       <children>
          <ImageView fx:id="imagenObra" disable="true" fitHeight="272.0" fitWidth="421.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -99,18 +99,18 @@
             <children>
             
                                                                       <!---Grid Pane con datos-->
-               <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="252.0">
+               <GridPane layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="230.0">
                  <columnConstraints>
                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.7999755859375" minWidth="10.0" prefWidth="108.7999605178833" />
                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.6000045776366" minWidth="10.0" prefWidth="144.00003948211668" />
                  </columnConstraints>
                  <rowConstraints>
-                   <RowConstraints maxHeight="70.60001220703126" minHeight="10.0" prefHeight="29.599951171875" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="29.599951171875" vgrow="SOMETIMES" />
                    <RowConstraints maxHeight="116.8000244140625" minHeight="0.0" prefHeight="24.600048828124997" vgrow="SOMETIMES" />
                  </rowConstraints>
                   <children>
                   
-                                                                                                    <Label fx:id="nombreObra" text="Nombre Obra jgasjhgdajsgd" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                                                                    <Label fx:id="nombreObra" alignment="TOP_LEFT" prefHeight="52.0" prefWidth="230.0" text="Nombre Obra jgasjhgdajsgd" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                         <font>
                            <Font name="Lucida Bright Demibold" size="20.0" />
                         </font>
