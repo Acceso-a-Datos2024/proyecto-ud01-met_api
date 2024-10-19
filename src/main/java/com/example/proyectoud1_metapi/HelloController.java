@@ -3,14 +3,10 @@ package com.example.proyectoud1_metapi;
 import com.example.proyectoud1_metapi.Model.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -18,7 +14,6 @@ import javafx.stage.Stage;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class HelloController {
 
@@ -115,27 +110,30 @@ public class HelloController {
 
     @FXML
     void exportData(MouseEvent event) {
-        System.out.println("boton pulsado");
-        File file= fileChooser.showSaveDialog(new Stage());
-        try {
-            String datos = artPiece.toShortString();
-            if (file != null){
+        //Añadimos las extensiones disponibles
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter(".txt", "*.txt"),
+                new FileChooser.ExtensionFilter(".json", "*.json"),
+                new FileChooser.ExtensionFilter(".xml", "*.xml")
+        );
 
-                saveSystem(file, datos);
+        if (artPiece != null) {
+            fileChooser.setTitle(artPiece.getTitle()+"_"+artPiece.getArtistDisplayName());
+            File file = fileChooser.showSaveDialog(new Stage());
+            if (file !=null){
+                SaveSystem.save(file, artPiece);
             }
-        } catch (Exception e) {
+
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Advertencia");
+            alert.setHeaderText(null);
+            alert.setContentText("No hay datos que exportar");
+            alert.show();
             System.out.println("No hay datos que guardar");
-        }
 
-    }
-
-    public void saveSystem(File file, String content){
-        try (PrintWriter writer = new PrintWriter(file)) {
-            writer.println(content);
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
+
 
 }

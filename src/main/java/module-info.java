@@ -8,6 +8,7 @@ module com.example.proyectoud1_metapi {
     requires org.kordamp.bootstrapfx.core;
     requires java.compiler;
     requires java.net.http;
+    requires com.fasterxml.jackson.dataformat.xml;
     requires com.fasterxml.jackson.databind;
 
     opens com.example.proyectoud1_metapi to javafx.fxml;

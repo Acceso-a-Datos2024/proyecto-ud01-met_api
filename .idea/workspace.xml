@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f0680be-0946-482c-b49b-3e42aa717210" name="Changes" comment="Creando guardado de datos en txt">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Icon/Image-not-found.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Icon/No-Image-Placeholder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Icon/No-Image-Placeholder.svg" afterDir="false" />
+    <list default="true" id="2f0680be-0946-482c-b49b-3e42aa717210" name="Changes" comment="Opcion exportar datos y retoques en la ui">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/SaveSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/Model/ArtPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectoud1_metapi/Model/ArtPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ArtPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ArtPiece.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729278378783</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Opcion exportar datos y retoques en la ui">
+      <option name="closed" value="true" />
+      <created>1729331841934</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729331841934</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +253,7 @@
     <MESSAGE value="Cambios interfaz login" />
     <MESSAGE value="Ajuste dimensiones ventana" />
     <MESSAGE value="Creando guardado de datos en txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creando guardado de datos en txt" />
+    <MESSAGE value="Opcion exportar datos y retoques en la ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Opcion exportar datos y retoques en la ui" />
   </component>
 </project>

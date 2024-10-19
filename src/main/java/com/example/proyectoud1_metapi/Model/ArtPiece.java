@@ -1,6 +1,7 @@
 
 package com.example.proyectoud1_metapi.Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -12,9 +13,13 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.example.proyectoud1_metapi.Model.Measurement;
 import com.example.proyectoud1_metapi.Model.Tag;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 @Generated("jsonschema2pojo")
-public class ArtPiece {
+@JacksonXmlRootElement(localName = "Artpiece")
+public class ArtPiece implements Serializable {
+    @JacksonXmlElementWrapper(useWrapping = false)
 
     private Integer objectID;
     private Boolean isHighlight;
