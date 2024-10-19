@@ -3,18 +3,20 @@ package com.example.proyectoud1_metapi.Model;
 import java.io.*;
 import java.util.HashMap;
 
+/*Clase para facilitar el manejo de los archivos de la cache que guardan
+HashMaps*/
 public class Cache {
     private HashMap<String, String> cacheMap;
     private String path = "src/main/resources/cache";
 
     public Cache(String cacheType) {
         try {
-            this.path = this.path.concat(cacheType);
-            ObjectInputStream lector = new ObjectInputStream(new FileInputStream(path));
-            this.cacheMap = (HashMap<String, String>) lector.readObject();
+            this.path = this.path.concat(cacheType);    //A partir del CacheType que recibimos, el archivo que queremos leer, obtenemos la ruta
+            ObjectInputStream lector = new ObjectInputStream(new FileInputStream(path));    //Lector de nuestro archivo en cache
+            this.cacheMap = (HashMap<String, String>) lector.readObject();  //En nuestro archivo en cache está almacenado un HashMap
             lector.close();
         } catch (IOException | ClassNotFoundException e) {
-            this.cacheMap = new HashMap<>();
+            this.cacheMap = new HashMap<>();    //Si salta una exceptión porque el archivo está vacío inicializamos nuestro HashMap vacío
             System.out.println("Caché vacío en: " + path);
         }
 
@@ -35,8 +37,8 @@ public class Cache {
 
     public void save() {
         try {
-            ObjectOutputStream escritor = new ObjectOutputStream(new FileOutputStream(this.path));
-            escritor.writeObject(this.cacheMap);
+            ObjectOutputStream escritor = new ObjectOutputStream(new FileOutputStream(this.path));  //Stream para escribir nuestro HashMap en el archivo de cache correspondiente
+            escritor.writeObject(this.cacheMap);    //Guardamos nuestro archivo de cache actualizado
             escritor.close();
             System.out.println("Guardado con éxito");
         } catch (IOException ex) {

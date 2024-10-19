@@ -1,5 +1,7 @@
 package com.example.proyectoud1_metapi.Model;
 
+/*Clase que representa los departementos del museo mediante los cuales se
+pueden filtrar en la API*/
 public class Departments {
 	private String displayName;
 	private int departmentId;

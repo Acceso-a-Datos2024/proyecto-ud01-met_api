@@ -8,14 +8,15 @@ import javax.annotation.processing.Generated;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.example.Model.ElementMeasurements;
+import com.example.proyectoud1_metapi.Model.ElementMeasurements;
 
+/*Clase que represante la propiedad "Measurement" de las obras*/
 @Generated("jsonschema2pojo")
 public class Measurement implements Serializable {
 
     private String elementName;
     private String elementDescription;
-    private org.example.Model.ElementMeasurements elementMeasurements;
+    private com.example.proyectoud1_metapi.Model.ElementMeasurements elementMeasurements;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
@@ -26,7 +27,7 @@ public class Measurement implements Serializable {
     public Measurement() {
     }
 
-    public Measurement(String elementName, String elementDescription, org.example.Model.ElementMeasurements elementMeasurements) {
+    public Measurement(String elementName, String elementDescription, com.example.proyectoud1_metapi.Model.ElementMeasurements elementMeasurements) {
         super();
         this.elementName = elementName;
         this.elementDescription = elementDescription;
