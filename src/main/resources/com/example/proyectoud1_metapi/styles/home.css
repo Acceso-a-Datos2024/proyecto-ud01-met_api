@@ -1,0 +1,128 @@
+.root {
+    -fx-background-color: #F9F9F9;
+    -fx-font-family: "Arial", sans-serif;
+
+}
+
+.tool-bar {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-background-color: #F9F9F9;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);
+}
+
+.tool-bar .button {
+
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.tool-bar .button:hover {
+    -fx-background-color: #E5F4FE; /* Lighter accent on hover */
+}
+
+.label {
+    -fx-text-fill: #333; /* Dark grey for text */
+
+}
+
+/* Styling for the main title */
+.label:first-of-type {
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;/* Darker text for the title */
+}
+
+.label:nth-of-type(2) {
+    -fx-text-fill: #7b7b7b; /* Light grey for subtitle */
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+
+.text-field, .combo-box {
+
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-prompt-text-fill: #999; /* Light grey for placeholder text */
+}
+
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #5AA9E6;
+    -fx-background-color: #E5F4FE; /* Lighter background on focus */
+}
+
+/* CheckBox style */
+.check-box {
+    -fx-text-fill: #333;
+}
+
+.check-box .box {
+    -fx-border-color: #5AA9E6;
+    -fx-background-color: transparent;
+}
+
+.check-box:hover .box {
+    -fx-border-color: #3C9AE2;
+}
+
+.button {
+    -fx-background-color: #5AA9E6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #3C9AE2; /* Darker hover effect */
+}
+
+.button:pressed {
+    -fx-background-color: #2086D5; /* Even darker when pressed */
+}
+
+
+/* Error message for artwork not found */
+#obraNotFound {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+/* Styling for HBox that holds artwork data */
+.hbox {
+    -fx-spacing: 20px;
+    -fx-padding: 10px 50px;
+}
+
+/* ImageView inside the HBox */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);
+}
+
+/* GridPane inside the AnchorPane for artwork data */
+.anchor-pane .grid-pane {
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
+    -fx-padding: 10px;
+}
+
+/* Labels for artwork details */
+#nombreObra, #anioObra, #nombreAutor, #medioObra {
+    -fx-text-fill: #333333;
+    -fx-wrap-text: true;
+    -fx-font-size: 14px;
+}
+
+#nombreObra {
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+#medioObra {
+    -fx-font-style: italic;
+    -fx-font-size: 13px;
+}

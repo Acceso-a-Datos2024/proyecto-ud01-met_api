@@ -1,3 +1,66 @@
+.root {
+    -fx-background-color: #F9F9F9;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 14px;
+}
+
+.vbox {
+    -fx-alignment: center;
+    -fx-spacing: 20px;
+}
+
+.label {
+    -fx-text-fill: #333; /* Dark grey for better readability */
+    -fx-font-weight: bold;
+}
+
+.text-field, .password-field {
+    -fx-pref-width: 180px;
+    -fx-pref-height: 26px;
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-prompt-text-fill: #999; /* Lighter grey for placeholder text */
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #5AA9E6; /* Focus color remains the same */
+    -fx-background-color: #E5F4FE; /* Lightened accent color on focus */
+}
+
+.button {
+    -fx-background-color: #5AA9E6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-width: 180px;
+    -fx-pref-height: 30px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width: 0px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #3C9AE2; /* Slightly darker on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #2086D5; /* Even darker when pressed */
+}
+
+/* Style for the message label (error or success) */
+.error-message {
+    -fx-text-fill: red; /* Default for error messages */
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+/* Adding padding to the VBox to center content more visually */
+.vbox {
+    -fx-padding: 20px;
+}
 .error-message {
     -fx-text-fill: red;
     -fx-font-weight: bold;
