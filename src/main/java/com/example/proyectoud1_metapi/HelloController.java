@@ -84,7 +84,7 @@ public class HelloController {
         if (departamentoSeleccionado != null) {
             departmentId = departamentoSeleccionado.getDepartmentId();
         }
-        ArtPiece artPiece = requester.getSearchArtPiece(etiqueta, departmentId);
+        artPiece = requester.getSearchArtPiece(etiqueta, departmentId);
 
         if (artPiece != null) {
             layoutData.setVisible(true);
@@ -115,8 +115,6 @@ public class HelloController {
             nombreAutor.setText("");
             medioObra.setText("");
             imagenObra.setImage(null);
-
-
         }
 
     }

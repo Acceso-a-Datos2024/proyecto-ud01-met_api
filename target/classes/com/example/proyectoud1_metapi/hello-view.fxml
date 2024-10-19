@@ -110,13 +110,14 @@
                  </rowConstraints>
                   <children>
                   
-                                                                                                    <Label fx:id="nombreObra" alignment="TOP_LEFT" prefHeight="52.0" prefWidth="230.0" text="Nombre Obra jgasjhgdajsgd" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <Label fx:id="nombreObra" maxWidth="Infinity" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="350.0" wrapText="true"  GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                         <font>
-                           <Font name="Lucida Bright Demibold" size="20.0" />
+                           <Font name="Lucida Bright Demibold" size="14.0" />
+
                         </font>
                      </Label>
-                      <Label fx:id="anioObra" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" prefHeight="47.0" prefWidth="52.0" text="Año Obrsadsadaslkjdlashdkjasha" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" />
-                      <Label fx:id="nombreAutor" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="76.0" text="Nombre autoasdnlajsdlkajsr" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                      <Label fx:id="anioObra" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" prefHeight="47.0" prefWidth="52.0"  GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                      <Label fx:id="nombreAutor" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="76.0"  GridPane.rowIndex="1" GridPane.valignment="TOP" />
                   </children>
                </GridPane>
                 <Label fx:id="medioObra" alignment="BOTTOM_LEFT" layoutY="219.0" prefHeight="53.0" prefWidth="230.0" text="Medio Obra" wrapText="true" />
