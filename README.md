@@ -2,14 +2,16 @@
 
 # Index
 - [1. Introducción al supuesto con descripción de la API y capturas POSTMAN](#1-introducción-al-supuesto-con-descripción-de-la-api-y-capturas-postman)
-- [2. Manual técnico para desarrolladores](#manual-técnico-para-desarrolladores-puede-ser-mediante-capturas-con-explicaciones-o-vídeo-tutorial) 
-- [3. Manual de usuario con juego de pruebas](#manual-de-usuario-con-juego-de-pruebas-puede-ser-mediante-capturas-con-explicaciones-o-vídeo-tutorial) 
-- [4. Explicación del reparto de las tareas](#explicación-del-reparto-de-las-tareas-entre-ambos-integrantes) 
-- [5. Extras realizados](#extras-realizados-solo-si-habéis-codificado-alguno) 
-- [6. Propuestas de mejora](#propuestas-de-mejora-nuevas-opciones-control-de-errores-) 
-- [7. Conclusiones y opinión](#conclusiones-y-opinión-del-trabajo-realizado-incluid-dedicación-temporal-y-cualificación-estimada)
-  
-# 1. Introducción al supuesto con descripción de la API y capturas POSTMAN.
+- [2. Manual técnico para desarrolladores](#2-manual-técnico-para-desarrolladores-puede-ser-mediante-capturas-con-explicaciones-o-vídeo-tutorial) 
+- [3. Manual de usuario con juego de pruebas](#3-manual-de-usuario-con-juego-de-pruebas-puede-ser-mediante-capturas-con-explicaciones-o-vídeo-tutorial) 
+- [4. Explicación del reparto de las tareas](#4-explicación-del-reparto-de-las-tareas-entre-ambos-integrantes) 
+- [5. Extras realizados](#5-extras-realizados-solo-si-habéis-codificado-alguno) 
+- [6. Propuestas de mejora](#6-propuestas-de-mejora-nuevas-opciones-control-de-errores-) 
+- [7. Conclusiones y opinión](#7-conclusiones-y-opinión-del-trabajo-realizado-incluid-dedicación-temporal-y-cualificación-estimada)
+
+---
+
+# 1. Introducción al supuesto con descripción de la API y capturas POSTMAN
 La API utilizada por nuestro grupo es [The Metropolitan Museum of Art Collection API](https://metmuseum.github.io/), que nos proporciona acceso a datos de más de 470,000 obras del Metropolitan Museum of Art.Toda la información es de dominio público, e incluye imágenes en alta resolución.
 
 En las siguientes capturas podemos ver distintas peticiones realizadas a la API a traves de Postman.
@@ -42,9 +44,9 @@ Cuando todo este listo podremos ver una imagen (si existe una de dominio públic
 Estos datos se pueden exportar en diferentes formatos para distintos usos. El botón de exportar se encuentra en la barra de tareas, en la esquina superior derecha. En estos momentos la aplicación permite:
 - **La exportación de los datos resumidos:** donde los datos mostrados en la interfaz se guardan en un archivo de texto. Es un formato más sencillo para un uso casual.
 - **La exportación de los datos completos:** los datos completos de la obra se pueden guardar en formato json, xml y binario. Esto incluye toda la información proporcionada por la API.
-# Manual de usuario con juego de pruebas (puede ser mediante capturas con explicaciones o vídeo tutorial*)
-# Explicación del reparto de las tareas entre ambos integrantes.
-# Extras realizados (solo si habéis codificado alguno)
-# Propuestas de mejora: nuevas opciones, control de errores ...
-# Conclusiones y opinión del trabajo realizado. Incluid dedicación temporal y cualificación estimada.
+# 2. Manual de usuario con juego de pruebas (puede ser mediante capturas con explicaciones o vídeo tutorial*)
+# 3. Explicación del reparto de las tareas entre ambos integrantes.
+# 4. Extras realizados (solo si habéis codificado alguno)
+# 5. Propuestas de mejora: nuevas opciones, control de errores ...
+# 6. Conclusiones y opinión del trabajo realizado. Incluid dedicación temporal y cualificación estimada.
 
