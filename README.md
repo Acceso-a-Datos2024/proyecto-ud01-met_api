@@ -26,7 +26,7 @@ En las siguientes capturas podemos ver distintas peticiones realizadas a la API 
 ![Captura de pantalla 2024-10-14 132126](https://github.com/user-attachments/assets/732e174e-65f4-4e98-8449-6bd8f2ecfe0f)
 
 
-# Manual  técnico para desarrolladores (puede ser mediante capturas con explicaciones o vídeo tutorial*)
+# 2. Manual  técnico para desarrolladores (puede ser mediante capturas con explicaciones o vídeo tutorial*)
 
 Esta aplicación está  diseñada para descubrir nuevas obras de arte dentro de la colección del Museo Metropolitano de Arte, no para consultar obras especificas, aunque el usuario podrá acotar los resultados para encontrar una pieza que coincida con sus intereses. 
 
@@ -44,9 +44,9 @@ Cuando todo este listo podremos ver una imagen (si existe una de dominio públic
 Estos datos se pueden exportar en diferentes formatos para distintos usos. El botón de exportar se encuentra en la barra de tareas, en la esquina superior derecha. En estos momentos la aplicación permite:
 - **La exportación de los datos resumidos:** donde los datos mostrados en la interfaz se guardan en un archivo de texto. Es un formato más sencillo para un uso casual.
 - **La exportación de los datos completos:** los datos completos de la obra se pueden guardar en formato json, xml y binario. Esto incluye toda la información proporcionada por la API.
-# 2. Manual de usuario con juego de pruebas (puede ser mediante capturas con explicaciones o vídeo tutorial*)
-# 3. Explicación del reparto de las tareas entre ambos integrantes.
-# 4. Extras realizados (solo si habéis codificado alguno)
-# 5. Propuestas de mejora: nuevas opciones, control de errores ...
-# 6. Conclusiones y opinión del trabajo realizado. Incluid dedicación temporal y cualificación estimada.
+# 3. Manual de usuario con juego de pruebas (puede ser mediante capturas con explicaciones o vídeo tutorial*)
+# 4. Explicación del reparto de las tareas entre ambos integrantes.
+# 5. Extras realizados (solo si habéis codificado alguno)
+# 6. Propuestas de mejora: nuevas opciones, control de errores ...
+# 7. Conclusiones y opinión del trabajo realizado. Incluid dedicación temporal y cualificación estimada.
 
