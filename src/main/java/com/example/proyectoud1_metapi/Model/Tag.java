@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/*Clase que represante la propiedad "Tag" de las obras*/
 @Generated("jsonschema2pojo")
 public class Tag implements Serializable {
 

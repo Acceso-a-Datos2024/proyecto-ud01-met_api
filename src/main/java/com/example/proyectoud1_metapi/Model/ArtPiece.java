@@ -18,6 +18,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 @Generated("jsonschema2pojo")
 @JacksonXmlRootElement(localName = "Artpiece")
+/*Clase que represanta un objeto de una obra de arte obtenida de la API*/
 public class ArtPiece implements Serializable {
     @JacksonXmlElementWrapper(useWrapping = false)
 
