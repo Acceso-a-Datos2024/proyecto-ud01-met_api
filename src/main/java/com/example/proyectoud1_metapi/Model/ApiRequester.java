@@ -123,12 +123,17 @@ public class ApiRequester {
 
 
 
-    public ArtPiece getSearchArtPiece(String etiqueta) throws MalformedURLException {
+    public ArtPiece getSearchArtPiece(String etiqueta , Integer departmentId) throws MalformedURLException {
         ArtPiece artPiece = new ArtPiece();
         try{
             
             ObjectMapper mapper = new ObjectMapper();
-            ResponseList response = mapper.readValue(new URL(urlSearch.concat("?q=").concat(etiqueta)), ResponseList.class);
+            StringBuilder searchUrl = new StringBuilder(urlSearch.concat("?q=").concat(etiqueta));
+            if (departmentId != null) {
+                searchUrl.append("&departmentId=").append(departmentId);
+            }
+            ResponseList response = mapper.readValue(new URL(searchUrl.toString()), ResponseList.class);
+
 
             if (response.getObjectIDs() != null && !response.getObjectIDs().isEmpty()) {
                 int firstId = response.getObjectIDs().get(0);

@@ -70,7 +70,7 @@
                                           
           <TextField fx:id="etiquetaBusqueda" promptText="etiqueta de busqueda" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
       
-                                              <ComboBox fx:id="departamentosBusqueda" promptText="Departamento" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+          <ComboBox fx:id="departamentosBusqueda" promptText="Departamento" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
           <Button onAction="#buscarObra" text="Buscar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
          <TextField promptText="Autor" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
       </children>

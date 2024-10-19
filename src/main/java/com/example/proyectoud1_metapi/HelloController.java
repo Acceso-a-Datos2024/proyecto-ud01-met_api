@@ -76,15 +76,22 @@ public class HelloController {
         obraNotFound.setVisible(false);
 
         ApiRequester requester = new ApiRequester();
-        artPiece = requester.getSearchArtPiece(etiquetaBusqueda.getText());
+        String etiqueta = etiquetaBusqueda.getText();
+
+
+        Departments departamentoSeleccionado = (Departments) departamentosBusqueda.getSelectionModel().getSelectedItem();
+        Integer departmentId = null;
+        if (departamentoSeleccionado != null) {
+            departmentId = departamentoSeleccionado.getDepartmentId();
+        }
+        ArtPiece artPiece = requester.getSearchArtPiece(etiqueta, departmentId);
 
         if (artPiece != null) {
             layoutData.setVisible(true);
-
             nombreObra.setText(artPiece.getTitle());
             anioObra.setText(artPiece.getObjectDate());
             if (artPiece.getArtistDisplayName().isEmpty() || artPiece.getArtistDisplayName()== null ){
-                nombreAutor.setText("No known author");
+                nombreAutor.setText("Artista desconocido");
             }
             else {
                 nombreAutor.setText(artPiece.getArtistDisplayName());
@@ -103,6 +110,12 @@ public class HelloController {
         }else {
             // Manejo de errores
             obraNotFound.setVisible(true);
+            nombreObra.setText("");
+            anioObra.setText("");
+            nombreAutor.setText("");
+            medioObra.setText("");
+            imagenObra.setImage(null);
+
 
         }
 
