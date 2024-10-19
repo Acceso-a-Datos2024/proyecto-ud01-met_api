@@ -123,7 +123,7 @@ public class ApiRequester {
 
 
 
-    public ArtPiece getSearchArtPiece(String etiqueta , Integer departmentId) throws MalformedURLException {
+    public ArtPiece getSearchArtPiece(String etiqueta, Integer departmentId, boolean isHighlight) throws MalformedURLException {
         ArtPiece artPiece = new ArtPiece();
         try{
             
@@ -131,6 +131,9 @@ public class ApiRequester {
             StringBuilder searchUrl = new StringBuilder(urlSearch.concat("?q=").concat(etiqueta));
             if (departmentId != null) {
                 searchUrl.append("&departmentId=").append(departmentId);
+            }
+            if (isHighlight) {
+                searchUrl.append("&isHighlight=true");
             }
             ResponseList response = mapper.readValue(new URL(searchUrl.toString()), ResponseList.class);
 

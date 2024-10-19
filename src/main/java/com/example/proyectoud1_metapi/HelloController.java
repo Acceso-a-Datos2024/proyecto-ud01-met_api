@@ -27,6 +27,8 @@ public class HelloController {
     private ImageView imagenObra;
 
     @FXML
+    private CheckBox obrasRecomendadasCheckBox;
+    @FXML
     private HBox layoutData;
     @FXML
     private Label anioObra;
@@ -77,6 +79,23 @@ public class HelloController {
 
         ApiRequester requester = new ApiRequester();
         String etiqueta = etiquetaBusqueda.getText();
+        if (etiqueta.isEmpty()) {
+            // Cambiar el borde del TextField a rojo
+            etiquetaBusqueda.setStyle("-fx-border-color: #d45050; -fx-border-width: 2px;");
+            nombreObra.setText("");
+            anioObra.setText("");
+            nombreAutor.setText("");
+            medioObra.setText("");
+            imagenObra.setImage(null);
+
+            // Opcional: Mostrar un mensaje de error (puedes usar un Label o un Alert)
+            System.out.println("El campo 'Etiqueta' es obligatorio.");
+
+            return; // Salir del método para no realizar la búsqueda
+        } else {
+            // Limpiar el estilo si hay texto
+            etiquetaBusqueda.setStyle("");
+        }
 
 
         Departments departamentoSeleccionado = (Departments) departamentosBusqueda.getSelectionModel().getSelectedItem();
@@ -84,7 +103,12 @@ public class HelloController {
         if (departamentoSeleccionado != null) {
             departmentId = departamentoSeleccionado.getDepartmentId();
         }
-        artPiece = requester.getSearchArtPiece(etiqueta, departmentId);
+
+
+        boolean isHighlight = obrasRecomendadasCheckBox.isSelected();
+
+        ArtPiece artPiece = requester.getSearchArtPiece(etiqueta, departmentId, isHighlight);
+
 
         if (artPiece != null) {
             layoutData.setVisible(true);
