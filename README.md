@@ -47,6 +47,17 @@ Estos datos se pueden exportar en diferentes formatos para distintos usos. El bo
 # 3. Manual de usuario con juego de pruebas (puede ser mediante capturas con explicaciones o vídeo tutorial*)
 # 4. Explicación del reparto de las tareas entre ambos integrantes.
 # 5. Extras realizados (solo si habéis codificado alguno)
+
+-- Login encriptado:
+
+Las credenciales (nombre de usuario y contraseña) se almacenan en un archivo properties, y se utilizan para acceder a la aplicación. En la vista de acceso, el usuario ingresará sus datos, los cuales se validarán comparándolos con los almacenados previamente. Para asegurar las credenciales, se utiliza el algoritmo de cifrado SHA-256, que garantiza que la contraseña no sea almacenada ni transmitida en texto plano
+
+
+
 # 6. Propuestas de mejora: nuevas opciones, control de errores ...
+
+--Paginación
+
+En lugar de mostrar únicamente el primer resultado de una consulta, se podría implementar un sistema de navegación con flechas que permita al usuario desplazarse entre los distintos resultados aportando mayor variedad.
 # 7. Conclusiones y opinión del trabajo realizado. Incluid dedicación temporal y cualificación estimada.
 
