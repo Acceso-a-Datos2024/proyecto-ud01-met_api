@@ -12,14 +12,14 @@
 }
 
 .tool-bar .button {
-    
+
     -fx-background-color: transparent;
     -fx-border-color: transparent;
     -fx-cursor: hand;
 }
 
 .tool-bar .button:hover {
-    -fx-background-color: #E5F4FE; /* Lighter accent on hover */
+    -fx-background-color: #b1e3ff; /* Lighter accent on hover */
 }
 
 .label {
@@ -97,7 +97,10 @@
     -fx-spacing: 20px;
     -fx-padding: 10px 50px;
 }
-
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #fcb3ff; /* Color de fondo al hacer hover */
+    -fx-text-fill: black; /* Cambiar el color del texto */
+}
 /* ImageView inside the HBox */
 .image-view {
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);

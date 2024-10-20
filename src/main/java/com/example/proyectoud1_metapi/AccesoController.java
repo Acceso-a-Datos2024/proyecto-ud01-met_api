@@ -42,8 +42,7 @@ public class AccesoController {
         String passwordAcceso = passwordField.getText();
         String passwordaAccesoHaseada=hashPassword(passwordAcceso);
 
-
-
+        //Si coincide con las credenciales guardadas accede a la vista principal, si no muestra un mensaje de error
         if (username.equals(usernameAcceso) && password.equals(passwordaAccesoHaseada)) {
             HelloApplication.setRoot("hello-view");
 
@@ -56,11 +55,9 @@ public class AccesoController {
 
     }
 
-
+    // Para mayor seguridad la contraseña está guardada hasheada, por ello hay que hacer lo mismo con la que
+    // introduce el usuario
     public static String hashPassword(String password) {
-
-
-
         try {
             MessageDigest  digest = MessageDigest.getInstance("SHA-256");
 
