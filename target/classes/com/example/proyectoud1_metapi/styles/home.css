@@ -98,7 +98,7 @@
     -fx-padding: 10px 50px;
 }
 .combo-box-popup .list-view .list-cell:hover {
-    -fx-background-color: #fcb3ff; /* Color de fondo al hacer hover */
+    -fx-background-color: #b1e3ff; /* Color de fondo al hacer hover */
     -fx-text-fill: black; /* Cambiar el color del texto */
 }
 /* ImageView inside the HBox */

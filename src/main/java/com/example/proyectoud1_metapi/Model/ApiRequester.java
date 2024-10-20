@@ -132,13 +132,15 @@ public class ApiRequester {
 
 
 
-
+    //Función encargada de hacer las consultas a la api según los criterios de usuario
     public ArtPiece getSearchArtPiece(String etiqueta, Integer departmentId, boolean isHighlight) throws MalformedURLException {
         ArtPiece artPiece = new ArtPiece();
         try{
-            
+            //Primero coge la url base y le añade el campo obligatorio
             ObjectMapper mapper = new ObjectMapper();
             StringBuilder searchUrl = new StringBuilder(urlSearch.concat("?q=").concat(etiqueta));  //Concatenamos a la url de búsqueda base el parámetro obligatorio 'q' cuyo valor introdujo el usuario mediante interfaz gráfica
+
+            //COmprueba si se escogió alguno de los campos opcionales y los añade a la url de la consulta
             if (departmentId != null) {
                 searchUrl.append("&departmentId=").append(departmentId);    //Si el usuario eligio un departamento lo concatenamos también
             }

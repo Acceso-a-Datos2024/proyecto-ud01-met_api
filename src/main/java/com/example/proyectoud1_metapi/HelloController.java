@@ -51,7 +51,8 @@ public class HelloController {
     @FXML
     private TextField etiquetaBusqueda;
 
-
+    // Se ejecuta al cargar la vista y lleva a cabo las funciones básicas como cargar el comboBox o
+    // sugerir cargas los datos de la última sesión
     public void initialize() {
         List<Departments> departamentos = getDepartmentsFromJson();
 
@@ -82,12 +83,12 @@ public class HelloController {
         }
 
     }
-
+    // Se ejecuta cuando el usuario cierra la página, permite guardar la consulta al usario
     public static void closing(){
         if (artPiece != null){
-            System.out.println("Peticion cerrar");
+            System.out.println("Petición cerrar");
             Dialog dialog= new Dialog();
-            dialog.setTitle("Wait!");  // Set the title of the dialog
+            dialog.setTitle("¡Espera!");  // Set the title of the dialog
             dialog.setContentText("¿Quieres guardar el estado de la sesión?");  // Set the content text to display the message
             dialog.getDialogPane().getButtonTypes().add(ButtonType.YES);
             dialog.getDialogPane().getButtonTypes().add(ButtonType.NO);
@@ -99,6 +100,8 @@ public class HelloController {
         }
     }
 
+    //Los departamentos los tenemos guardados en un json al ser algo que no se va a modificar. Esta función
+    // coge esos datos para agregarlos al comboBox
     private List<Departments> getDepartmentsFromJson(){
         List<Departments> departments = new ArrayList<>();
         try {
@@ -122,8 +125,8 @@ public class HelloController {
         ApiRequester requester = new ApiRequester();
         String etiqueta = etiquetaBusqueda.getText();
         if (etiqueta.isEmpty()) {
-            // Cambiar el borde del TextField a rojo
-            etiquetaBusqueda.setStyle("-fx-border-color: #d45050; -fx-border-width: 2px;");
+            // Cambiar el campo de texto si esta vacío y no ejecurar la consulta al ser obligatorio
+            etiquetaBusqueda.setStyle("-fx-border-color: #dd4444; -fx-border-width: 2px;  -fx-background-color:  #ff8484; -fx-text-fill: black;");
             nombreObra.setText("");
             anioObra.setText("");
             nombreAutor.setText("");
@@ -131,12 +134,12 @@ public class HelloController {
             imagenObra.setImage(null);
 
             // Opcional: Mostrar un mensaje de error (puedes usar un Label o un Alert)
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Advertencia");
-            alert.setHeaderText(null);
-            alert.setContentText("El campo 'Etiqueta' es obligatorio");
-            alert.show();
-            System.out.println("El campo 'Etiqueta' es obligatorio.");
+//            Alert alert = new Alert(Alert.AlertType.WARNING);
+//            alert.setTitle("Advertencia");
+//            alert.setHeaderText(null);
+//            alert.setContentText("El campo 'Etiqueta' es obligatorio");
+//            alert.show();
+//            System.out.println("El campo 'Etiqueta' es obligatorio.");
 
             return; // Salir del método para no realizar la búsqueda
         } else {
@@ -145,13 +148,12 @@ public class HelloController {
         }
 
 
+        //Comprueba si se seleccionó o no un departamento o las obras recomendadas para mandar el valor escogido o null
         Departments departamentoSeleccionado = (Departments) departamentosBusqueda.getSelectionModel().getSelectedItem();
         Integer departmentId = null;
         if (departamentoSeleccionado != null) {
             departmentId = departamentoSeleccionado.getDepartmentId();
         }
-
-
         boolean isHighlight = obrasRecomendadasCheckBox.isSelected();
 
         artPiece = requester.getSearchArtPiece(etiqueta, departmentId, isHighlight);
@@ -159,6 +161,8 @@ public class HelloController {
         cargarDatos();
     }
 
+    // Vuelca los datos de una obra de arte en la vista, es una función a parte para usarlo a la hora de hacer
+    // consultas o carga la última actividad
     public void cargarDatos(){
         if (artPiece != null) {
             layoutData.setVisible(true);
@@ -191,7 +195,8 @@ public class HelloController {
             imagenObra.setImage(null);
         }
     }
-
+    // Función para exportar los datos a los diferentes ficheros requeridos, se activa con el icono en
+    // la toolbar
     @FXML
     void exportData(MouseEvent event) {
         //Añadimos las extensiones disponibles

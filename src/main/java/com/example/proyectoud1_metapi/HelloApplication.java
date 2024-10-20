@@ -24,7 +24,7 @@ public class HelloApplication extends Application {
 
         Image icon= new Image(getClass().getResource("/Icon/icon.png").toExternalForm());
         stage.getIcons().add(icon);
-        stage.setTitle("proyecto-ud01-met_api");
+        stage.setTitle("Museo metropolitano");
         stage.setScene(scene);
         stage.setOnCloseRequest(event -> {
             HelloController.closing();
@@ -33,7 +33,7 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
-
+    //Función para cambiar de vista, además reconfigura el tamaño al ser usada solo para pasar del login a la home
     static void setRoot(String fxml) throws IOException {
         Parent root = FXMLLoader.load(HelloApplication.class.getResource(fxml + ".fxml"));
         stage.setOpacity(0);
