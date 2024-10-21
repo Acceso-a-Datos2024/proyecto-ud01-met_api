@@ -149,7 +149,7 @@ Estos datos se pueden exportar en diferentes formatos para distintos usos. El bo
 - **Adición de un login**: El usuario tendrá que logearse a una cuenta almacenada en un fichero properties que almacena las credenciales (nombre de usuario y contraseña). En la vista de acceso, el usuario ingresará sus datos, los cuales se validarán comparándolos con los almacenados previamente. Para asegurar las credenciales, se utiliza el algoritmo de cifrado SHA-256, que garantiza que la contraseña no sea almacenada ni transmitida en texto plano 
 
 # 6. Propuestas de mejora: nuevas opciones, control de errores ...
-- **Paginación** :En lugar de mostrar únicamente el primer resultado de una consulta, se podría implementar un sistema de navegación con flechas que permita al usuario desplazarse entre los distintos resultados aportando mayor variedad y además permitir ordenarlos por diferentes campos como el nombre de la obra o la fecha de creación.
+- **Paginación**: En lugar de mostrar únicamente el primer resultado de una consulta, se podría implementar un sistema de navegación con flechas que permita al usuario desplazarse entre los distintos resultados aportando mayor variedad y además permitir ordenarlos por diferentes campos como el nombre de la obra o la fecha de creación.
 - **Más opciones de filtrado**
 - **Opción para limpiar la cache**
 - **QoL Changes**: Opción para borrar todos los campos del formulario 
@@ -157,6 +157,9 @@ Estos datos se pueden exportar en diferentes formatos para distintos usos. El bo
   
 # 7. Conclusiones y opinión del trabajo realizado. Incluid dedicación temporal y cualificación estimada
 Al principio costo hacerse al modelo de trabajo en grupo por GitHub y congigurar el JavaFX. Sin embargo, una vez superados esos obstáculos avanzamos bastante en poco tiempo.
+
 Creemos que nos quedó un trabajo muy bueno y esperamos una nota acorde (entre un 9 - 10) :)
+
 Para futuros proyectos hemos aprendido a dedicarle más tiempo a la planificación y organización.
+
 Con respecto a la API encontramos, a medida que trabajábamos con ella, diversos errores que condicionaron el funcionamento de nuestra app; por ejemplo no se pueden realizar consultas filtradas por autor a la API, existen ids sin objetos asociados, la estructura de los objeetos no es consistente...
