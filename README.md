@@ -31,7 +31,9 @@ En las siguientes capturas podemos ver distintas peticiones realizadas a la API 
 Esta aplicación está  diseñada para descubrir nuevas obras de arte dentro de la colección del Museo Metropolitano de Arte, no para consultar obras especificas, aunque el usuario podrá acotar los resultados para encontrar una pieza que coincida con sus intereses. 
 
 Al iniciar la aplicación lo primero que nos aparecerá es el login. Podremos acceder con el usuario "admin" y la contraseña "admin123". 
-==añadir imagen==
+![image](https://github.com/user-attachments/assets/73c5301f-22ee-4ad6-a799-b801e590d5b8)
+
+
 
 Tras acceder el usuario deberá proporcionar una palabra clave (obligatoria), y otros parámetros optativos para filtrar la búsqueda según departamento o buscando solo entre las obras populares. Debemos tener en cuenta que no todas las obras del MET cuentan con imágenes de dominio público, en cuyo caso se indicará que no hay imágenes disponibles. También existe la posibilidad de pedir una obra aleatoria, que siempre devolverá una con imagen.
 
@@ -100,16 +102,14 @@ A partir de nuestro objeto ResponseList comprobamos si la búsqueda obtuvo una r
 # 4. Explicación del reparto de las tareas entre ambos integrantes. {#4-explicación-reparto-tareas}
 # 5. Extras realizados (solo si habéis codificado alguno) {#5-extras-realizados}
 
--- Login encriptado:
-
-Las credenciales (nombre de usuario y contraseña) se almacenan en un archivo properties, y se utilizan para acceder a la aplicación. En la vista de acceso, el usuario ingresará sus datos, los cuales se validarán comparándolos con los almacenados previamente. Para asegurar las credenciales, se utiliza el algoritmo de cifrado SHA-256, que garantiza que la contraseña no sea almacenada ni transmitida en texto plano
+- **Login encriptado:**: Las credenciales (nombre de usuario y contraseña) se almacenan en un archivo properties, y se utilizan para acceder a la aplicación. En la vista de acceso, el usuario ingresará sus datos, los cuales se validarán comparándolos con los almacenados previamente. Para asegurar las credenciales, se utiliza el algoritmo de cifrado SHA-256, que garantiza que la contraseña no sea almacenada ni transmitida en texto plano
 
 
 
 # 6. Propuestas de mejora: nuevas opciones, control de errores ... {#6-propuestas-de-mejora-y-errores}
 
---Paginación
+- **Paginación** :En lugar de mostrar únicamente el primer resultado de una consulta, se podría implementar un sistema de navegación con flechas que permita al usuario desplazarse entre los distintos resultados aportando mayor variedad.
 
-En lugar de mostrar únicamente el primer resultado de una consulta, se podría implementar un sistema de navegación con flechas que permita al usuario desplazarse entre los distintos resultados aportando mayor variedad.
+- **Importar**: Además de la opción de exportar los datos, sería útil implementar una funcionalidad que permita importarlos. Serviría para la reutilización de información previamente exportada.
 # 7. Conclusiones y opinión del trabajo realizado. Incluid dedicación temporal y cualificación estimada. {#7-conclusiones-y-opinión}
 
