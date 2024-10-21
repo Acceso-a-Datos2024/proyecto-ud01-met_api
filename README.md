@@ -88,6 +88,15 @@ A partir de nuestro objeto ResponseList comprobamos si la búsqueda obtuvo una r
 ![image](https://github.com/user-attachments/assets/d4bf8b01-2703-41f0-9f32-0fd9eda87888)
 
 
+##Jar
+
+![image](https://github.com/user-attachments/assets/5221d32e-d1af-4710-91c6-39617470bb55)
+
+![image](https://github.com/user-attachments/assets/6f15032d-5112-4e36-87d1-7418c6c7bde4)
+
+![image](https://github.com/user-attachments/assets/40ebff83-5d5c-4cf1-9116-599ab44746d2)
+
+
 
 # 3. Manual de usuario con juego de pruebas (puede ser mediante capturas con explicaciones o vídeo tutorial*) {#3-manual-de-usuario}
 Esta aplicación está  diseñada para descubrir nuevas obras de arte dentro de la colección del Museo Metropolitano de Arte, no para consultar obras especificas, aunque el usuario podrá acotar los resultados para encontrar una pieza que coincida con sus intereses. 
