@@ -1,17 +1,17 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/JkDJUAAN)
 
 # Index
-- [1. Introducción al supuesto con descripción de la API y capturas POSTMAN](#1-introducción)
-- [2. Manual técnico para desarrolladores](#2-manual-técnico)
-- [3. Manual de usuario con juego de pruebas](#3-manual-de-usuario) 
-- [4. Explicación del reparto de las tareas](#4-explicación-reparto-tareas) 
-- [5. Extras realizados](#5-extras-realizados) 
-- [6. Propuestas de mejora](#6-propuestas-de-mejora-y-errores) 
-- [7. Conclusiones y opinión](#7-conclusiones-y-opinión)
+- [1. Introducción al supuesto con descripción de la API y capturas POSTMAN]()
+- [2. Manual técnico para desarrolladores]()
+- [3. Manual de usuario con juego de pruebas]() 
+- [4. Explicación del reparto de las tareas]() 
+- [5. Extras realizados]() 
+- [6. Propuestas de mejora]() 
+- [7. Conclusiones y opinión]()
 
 ---
 
-# 1. Introducción al supuesto con descripción de la API y capturas POSTMAN {#1-introducción}
+# 1. Introducción al supuesto con descripción de la API y capturas POSTMAN
 La API utilizada por nuestro grupo es [The Metropolitan Museum of Art Collection API](https://metmuseum.github.io/), que nos proporciona acceso a datos de más de 470,000 obras del Metropolitan Museum of Art.Toda la información es de dominio público, e incluye imágenes en alta resolución.
 
 En las siguientes capturas podemos ver distintas peticiones realizadas a la API a traves de Postman.
@@ -26,7 +26,7 @@ En las siguientes capturas podemos ver distintas peticiones realizadas a la API 
 ![Captura de pantalla 2024-10-14 132126](https://github.com/user-attachments/assets/732e174e-65f4-4e98-8449-6bd8f2ecfe0f)
 
 
-# 2. Manual técnico para desarrolladores (puede ser mediante capturas con explicaciones o vídeo tutorial*) {#2-manual-técnico-para-desarrolladores}
+# 2. Manual técnico para desarrolladores (puede ser mediante capturas con explicaciones o vídeo tutorial*)
 
 ## Model
 En la carpeta Model encontramos todas las clases que nos servirán para la realización de consultas a la API, el manejo de sus respuestas a partir de objetos a las que mapearemos dichas respuestas y la administración de la cache de nuestra aplicación.
@@ -98,7 +98,7 @@ A partir de nuestro objeto ResponseList comprobamos si la búsqueda obtuvo una r
 
 
 
-# 3. Manual de usuario con juego de pruebas (puede ser mediante capturas con explicaciones o vídeo tutorial*) {#3-manual-de-usuario}
+# 3. Manual de usuario con juego de pruebas (puede ser mediante capturas con explicaciones o vídeo tutorial*)
 Esta aplicación está  diseñada para descubrir nuevas obras de arte dentro de la colección del Museo Metropolitano de Arte, no para consultar obras especificas, aunque el usuario podrá acotar los resultados para encontrar una pieza que coincida con sus intereses. 
 
 Al iniciar la aplicación lo primero que nos aparecerá es el login. Podremos acceder con el usuario "admin" y la contraseña "admin123". 
@@ -118,7 +118,7 @@ Cuando todo este listo podremos ver una imagen (si existe una de dominio públic
 Estos datos se pueden exportar en diferentes formatos para distintos usos. El botón de exportar se encuentra en la barra de tareas, en la esquina superior derecha. En estos momentos la aplicación permite:
 - **La exportación de los datos resumidos:** donde los datos mostrados en la interfaz se guardan en un archivo de texto. Es un formato más sencillo para un uso casual.
 - **La exportación de los datos completos:** los datos completos de la obra se pueden guardar en formato json, xml y binario. Esto incluye toda la información proporcionada por la API.
-# 4. Explicación del reparto de las tareas entre ambos integrantes. {#4-explicación-reparto-tareas}
+# 4. Explicación del reparto de las tareas entre ambos integrantes
 #### Iago
 - Login
 - Cambio de escenas
@@ -137,7 +137,7 @@ Estos datos se pueden exportar en diferentes formatos para distintos usos. El bo
 - Exportación
 - Guardar y cargar última sesión
   
-# 5. Extras realizados (solo si habéis codificado alguno) {#5-extras-realizados}
+# 5. Extras realizados (solo si habéis codificado alguno)
 - **Almacenaje de datos**: El usuario tiene la opción de exportar el objeto de su búsqueda en archivos .json, .txt, .xml o .bin
 - **Control de errores**:
 	- Nos aseguramos que el usuario introdujo el parámetro obligatorio para realizar una consulta
@@ -148,14 +148,14 @@ Estos datos se pueden exportar en diferentes formatos para distintos usos. El bo
 - **Almacenamiento del último estado de la aplicación**: Al cerrar la aplicación se le muestra un mensaje al usuario preguntándole si quiere guardar la consulta actual, con sus parámetros y objeto devuelto en un archivo .json. La siguiente vez que se inicié la sesión y un archivo de save existe se le preguntará al usuario si desea restaurar la última sesión
 - **Adición de un login**: El usuario tendrá que logearse a una cuenta almacenada en un fichero properties que almacena las credenciales (nombre de usuario y contraseña). En la vista de acceso, el usuario ingresará sus datos, los cuales se validarán comparándolos con los almacenados previamente. Para asegurar las credenciales, se utiliza el algoritmo de cifrado SHA-256, que garantiza que la contraseña no sea almacenada ni transmitida en texto plano 
 
-# 6. Propuestas de mejora: nuevas opciones, control de errores ... {#6-propuestas-de-mejora-y-errores}
+# 6. Propuestas de mejora: nuevas opciones, control de errores ...
 - **Paginación** :En lugar de mostrar únicamente el primer resultado de una consulta, se podría implementar un sistema de navegación con flechas que permita al usuario desplazarse entre los distintos resultados aportando mayor variedad y además permitir ordenarlos por diferentes campos como el nombre de la obra o la fecha de creación.
 - **Más opciones de filtrado**
 - **Opción para limpiar la cache**
 - **QoL Changes**: Opción para borrar todos los campos del formulario 
 - **Importar**: Además de la opción de exportar los datos, sería útil implementar una funcionalidad que permita importarlos. Serviría para la reutilización de información previamente exportada.
   
-# 7. Conclusiones y opinión del trabajo realizado. Incluid dedicación temporal y cualificación estimada. {#7-conclusiones-y-opinión}
+# 7. Conclusiones y opinión del trabajo realizado. Incluid dedicación temporal y cualificación estimada
 Al principio costo hacerse al modelo de trabajo en grupo por GitHub y congigurar el JavaFX. Sin embargo, una vez superados esos obstáculos avanzamos bastante en poco tiempo.
 Creemos que nos quedó un trabajo muy bueno y esperamos una nota acorde (entre un 9 - 10) :)
 Para futuros proyectos hemos aprendido a dedicarle más tiempo a la planificación y organización.
