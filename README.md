@@ -42,7 +42,7 @@ Tras acceder el usuario deberá proporcionar una palabra clave (obligatoria), y 
 
 Una vez realizada la búsqueda el resultado puede tardar unos pocos segundos en aparecer, dependiendo de la cantidad de obras que coincidan con los criterios. Esta espera será más breve cuanto más se use la aplicación gracias al uso del cache. 
 Cuando todo este listo podremos ver una imagen (si existe una de dominio público) de la obra, su título, autor, año de creación y medio.
-![image](https://github.com/user-attachments/assets/f3f5a8f5-495f-4fcc-9a8d-7b8d4241e869)
+![image](https://github.com/user-attachments/assets/e0788cdf-c2ec-4696-8f71-2de3beff48df)
 
 Estos datos se pueden exportar en diferentes formatos para distintos usos. El botón de exportar se encuentra en la barra de tareas, en la esquina superior derecha. En estos momentos la aplicación permite:
 - **La exportación de los datos resumidos:** donde los datos mostrados en la interfaz se guardan en un archivo de texto. Es un formato más sencillo para un uso casual.
