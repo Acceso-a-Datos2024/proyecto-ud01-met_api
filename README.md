@@ -72,14 +72,24 @@ También tiene un atributo de tipo Cache para cada uno de los archivos de nuestr
 El único constructor de la clase está vacío porque todos los atributos se usan con sus valores por defecto.
 
 El método **getTotalNumberOfArtPieces** realiza una consulta a la API para que devuelva una ResponseList con todos los objetos disponibles. Debido a que lo único que nos interesa el el campo total y al gran número de ids disponibles (lo cual ralentiza la aplicación) una vez obtenido el número total se guarda en un archivo en la cache para no tener que interpretar una respuesta tan grande en subsecuentes llamadas.
+![image](https://github.com/user-attachments/assets/4e24ac4e-c621-4f3b-aff7-31cac3d65eb5)
+
 
 El método **getRandomId** utiliza el número total de ids disponibles para generar uno aleatorio.
+![image](https://github.com/user-attachments/assets/28bf43ac-d0db-4f05-be08-f9783760e15a)
+
 
 El método **getRandomArtPiece** se usa para obtener un objeto aleatorio de la API a partir de un id generado aleatoriamente. Sin embargo como en la API existen ids que no están vinculados a ningún objeto tuvieron que implementarse una serie de contingencias y la cache blacklist para evitar posibles errores.
 Primero el método comprueba si el id aleatorio ya está almacenado en una de las dos caches, sí se encuentra en la cache de objetos válidos lo leé de ahí y lo devuelve, sí se encuentra en la cache de ids no válidos se vuelve a llamar a sí mismo. Si no está en ninguna de la cache construimos nuestra URL de petición concatenando baseURL con nuestro id aleatorio y mapeamos la respuesta a un objeto ArtPiece. Si el mapea resultó erróneo es que el id no está vínculado a un objeto así que lo almacenamos en nuestra blacklist y volvemos a llamar al método. Si el mapeo se realizó con éxito guardamos el id y el objeto en la cache de objetos válidos pero realizamos otra comprobación: si el objeto obtenido tiene una imagen disponible para ser mostrada. Si no, volvemos a generar otro id para realizar otra petición, si el objeto cuenta con una imagen disponible devolvemos nuestro objeto ArtPiece que será usado por el un controlador para actualizar la vista correspondiente.
+![image](https://github.com/user-attachments/assets/88a0f6fe-3cd6-49ff-a7a0-93826c664e68)
 
-El método **searchGetArtPiece** realiza consultas a la API con los filtros de búsqueda introducidos por el usuario en la interfaz gráfica. Primero construye la URL de petición concatenando los filtros de búsqueda introducidos por el usuario a nuestra urlSearch y la respuesta obtenido será mapeada a un objeto tipo ResponseList.
+
+El método **searchGetArtPiece** realiza consultas a la API con los filtros de búsqueda introducidos por el usuario en la interfaz gráfica, comprobando cuales de los opcionales añadió. Primero construye la URL de petición concatenando los filtros de búsqueda introducidos por el usuario a nuestra urlSearch y la respuesta obtenido será mapeada a un objeto tipo ResponseList.
 A partir de nuestro objeto ResponseList comprobamos si la búsqueda obtuvo una respuesta o no (si la lista de ids de nuestro objeto ResponseList está vacía o no). Si está vacía devolvemos null y el controlador ya se encargará de actualizar la vista de manera adecuada. Si obtuvo respuesta cogemos el primer id de la lista y comprobamos si está presente en nuestra cache de ids y objetos válidos. Si es así leemos su JSON de ahí, lo mapeamos a un objeto ArtPiece y se lo devolvemos al controlador. Si no está en cache construimos una URL de petición por ese id, concatenando el id a nuestra baseURL y realizamos la consulta a la API, guardamos el id y su objeto en la cache y mapeamos a un objeto ArtPiece la respuesta, que se lo devolveremos al controlador.
+
+![image](https://github.com/user-attachments/assets/d4bf8b01-2703-41f0-9f32-0fd9eda87888)
+
+
 
 # 3. Manual de usuario con juego de pruebas (puede ser mediante capturas con explicaciones o vídeo tutorial*) {#3-manual-de-usuario}
 Esta aplicación está  diseñada para descubrir nuevas obras de arte dentro de la colección del Museo Metropolitano de Arte, no para consultar obras especificas, aunque el usuario podrá acotar los resultados para encontrar una pieza que coincida con sus intereses. 
