@@ -44,7 +44,7 @@ public class AccesoController {
 
         //Si coincide con las credenciales guardadas accede a la vista principal, si no muestra un mensaje de error
         if (username.equals(usernameAcceso) && password.equals(passwordaAccesoHaseada)) {
-            HomeApplication.setRoot("hello-view");
+            HomeApplication.setRoot("home-view");
 
         }else{
             messageLabel.setText("Usuario o contraseña incorrectos");

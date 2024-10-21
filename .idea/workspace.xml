@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="proyectoud1_metapi:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f0680be-0946-482c-b49b-3e42aa717210" name="Changes" comment="Refactoring">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/proyectoud1_metapi_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/acceso.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/acceso.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/home-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/home-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cache/blacklist.bin" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cache/blacklist.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cache/objects.bin" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cache/objects.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/bye-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/example-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/hello-view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,25 +71,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HomeApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Users/Sam/Desktop/Nueva carpeta/proyecto-ud01-met_api/src/main/resources/Icon&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.HomeApplication.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "JAR Application.MuseoApi.jar.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/a22iagorg/Documents/GitHub/proyecto-ud01-met_api/out/artifacts/proyectoud1_metapi_jar/proyectoud1_metapi.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.6229885",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\Sam\Desktop\Nueva carpeta\proyecto-ud01-met_api\src\main\resources\Icon" />
@@ -87,7 +105,7 @@
       <recent name="C:\Users\a22iagorg\Documents\GitHub\proyecto-ud01-met_api" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JAR Application.MuseoApi.jar">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -162,6 +180,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MuseoApi.jar" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/proyectoud1_metapi_jar/proyectoud1_metapi.jar" />
+      <option name="VM_PARAMETERS" value="--module-path=&quot;/Users/a22iagorg/Documents/javafx-sdk-21.0.5/lib&quot; --add-modules=&quot;javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.swing,javafx.media&quot;" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\a22iagorg\Documents\GitHub\proyecto-ud01-met_api" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="proyecto-ud01-met_api" />
       <method v="2">
@@ -175,6 +200,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.HomeApplication" />
+      <item itemvalue="JAR Application.MuseoApi.jar" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
