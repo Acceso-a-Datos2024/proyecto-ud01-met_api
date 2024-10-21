@@ -37,11 +37,12 @@ Al iniciar la aplicación lo primero que nos aparecerá es el login. Podremos ac
 
 Tras acceder el usuario deberá proporcionar una palabra clave (obligatoria), y otros parámetros optativos para filtrar la búsqueda según departamento o buscando solo entre las obras populares. Debemos tener en cuenta que no todas las obras del MET cuentan con imágenes de dominio público, en cuyo caso se indicará que no hay imágenes disponibles. También existe la posibilidad de pedir una obra aleatoria, que siempre devolverá una con imagen.
 
-==añadir imagen==
+![image](https://github.com/user-attachments/assets/ae8a0c3c-6990-484a-b66e-22dc16f5dfb5)
+
 
 Una vez realizada la búsqueda el resultado puede tardar unos pocos segundos en aparecer, dependiendo de la cantidad de obras que coincidan con los criterios. Esta espera será más breve cuanto más se use la aplicación gracias al uso del cache. 
 Cuando todo este listo podremos ver una imagen (si existe una de dominio público) de la obra, su título, autor, año de creación y medio.
-==añadir image==
+![image](https://github.com/user-attachments/assets/f3f5a8f5-495f-4fcc-9a8d-7b8d4241e869)
 
 Estos datos se pueden exportar en diferentes formatos para distintos usos. El botón de exportar se encuentra en la barra de tareas, en la esquina superior derecha. En estos momentos la aplicación permite:
 - **La exportación de los datos resumidos:** donde los datos mostrados en la interfaz se guardan en un archivo de texto. Es un formato más sencillo para un uso casual.
