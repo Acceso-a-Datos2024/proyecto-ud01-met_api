@@ -46,7 +46,6 @@ Enum que representa los distintos tipos de cache disponibles, es decir los dos a
 Contamos con dos archivos diferentes porque hay ids de obras en la API que no se corresponden a ninguna obra por lo que a parte de un archivo para los ids de objetos que sí existen y dichos objetos (STORAGE), tenemos otro con un HashMap de ids no válidos (BLACKLIST).
 ![imagen](https://github.com/user-attachments/assets/7a95178d-f82c-49da-83a7-1dbd34588438)
 
-
 #### Cache:
 En una carpeta del proyecto llamada cache almacenamos archivos binarios que contienen un HashMap con objetos ArtPiece (la clave de cada objeto es su id y el valor es su string en formato JSON) que ya nos ha devuelto la API en consultas anteriores. Para manejar la cache de forma más sencilla desde el ApiRequester se ha creado esta clase que encapsula todas las operaciones de lectura, escritura y guardado de los archivos de la cache.
 Sus atributos son dos:
@@ -57,10 +56,10 @@ El constructor de un objeto cache pide un parámetro cacheType, un string que ob
 
 Cuenta con métodos setter y getter de cacheMap además de uno que muestra por pantalla el contenido del mismo por si es necesario realizar pruebas. Pero los métodos más usados son los siguientes:
 - **add**: Al pasarle el id de un objeto (en string) y el objeto en sí (en string formato JSON) los añade al cacheMap de nuestro objeto cache.
-- ![imagen](https://github.com/user-attachments/assets/6748ca2b-ee03-4e93-90f1-6d3d443cbc68)
+  ![imagen](https://github.com/user-attachments/assets/6748ca2b-ee03-4e93-90f1-6d3d443cbc68)
 
 - **save**: Guarda en el archivo de cache correspondiente el cacheMap actual de nuestro objeto; no añade al archivo sino que sobrescribe ya que siempre estamos trabajando con una copia del HashMap de la cache ya que en el constructor inicializamos el cacheMap al HashMap leído del archivo.
-- ![imagen](https://github.com/user-attachments/assets/ceac5e31-3548-4222-809f-a3182f735195)
+  ![imagen](https://github.com/user-attachments/assets/ceac5e31-3548-4222-809f-a3182f735195)
 
 - **existsId**: Comprueba si el id que le pasamos ya existe en el HashMap de nuestro archivo de cache correspondiente.
 ![imagen](https://github.com/user-attachments/assets/dde0e8d1-d606-47a7-89e3-c7843e4d57c4)
