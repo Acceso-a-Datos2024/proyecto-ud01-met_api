@@ -112,6 +112,24 @@ Estos datos se pueden exportar en diferentes formatos para distintos usos. El bo
 - **La exportación de los datos resumidos:** donde los datos mostrados en la interfaz se guardan en un archivo de texto. Es un formato más sencillo para un uso casual.
 - **La exportación de los datos completos:** los datos completos de la obra se pueden guardar en formato json, xml y binario. Esto incluye toda la información proporcionada por la API.
 # 4. Explicación del reparto de las tareas entre ambos integrantes. {#4-explicación-reparto-tareas}
+#### Iago
+- Login
+- Cambio de escenas
+- Encriptado de contraseña
+- Consulta segun parametros
+- Muestra de datos
+
+#### Manuel
+- API request
+- Implementación de Caché
+- Generación e implementación de clases
+
+#### Samuel
+- Estilos
+- Interfaz
+- Exportación
+- Guardar y cargar última sesión
+- 
 # 5. Extras realizados (solo si habéis codificado alguno) {#5-extras-realizados}
 
 - **Login encriptado:**: Las credenciales (nombre de usuario y contraseña) se almacenan en un archivo properties, y se utilizan para acceder a la aplicación. En la vista de acceso, el usuario ingresará sus datos, los cuales se validarán comparándolos con los almacenados previamente. Para asegurar las credenciales, se utiliza el algoritmo de cifrado SHA-256, que garantiza que la contraseña no sea almacenada ni transmitida en texto plano
