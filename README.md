@@ -28,8 +28,6 @@ En las siguientes capturas podemos ver distintas peticiones realizadas a la API 
 
 # 2. Manual técnico para desarrolladores (puede ser mediante capturas con explicaciones o vídeo tutorial*) {#2-manual-técnico-para-desarrolladores}
 
-
-
 ## Model
 En la carpeta Model encontramos todas las clases que nos servirán para la realización de consultas a la API, el manejo de sus respuestas a partir de objetos a las que mapearemos dichas respuestas y la administración de la cache de nuestra aplicación.
 
@@ -129,17 +127,27 @@ Estos datos se pueden exportar en diferentes formatos para distintos usos. El bo
 - Interfaz
 - Exportación
 - Guardar y cargar última sesión
-- 
+  
 # 5. Extras realizados (solo si habéis codificado alguno) {#5-extras-realizados}
-
-- **Login encriptado:**: Las credenciales (nombre de usuario y contraseña) se almacenan en un archivo properties, y se utilizan para acceder a la aplicación. En la vista de acceso, el usuario ingresará sus datos, los cuales se validarán comparándolos con los almacenados previamente. Para asegurar las credenciales, se utiliza el algoritmo de cifrado SHA-256, que garantiza que la contraseña no sea almacenada ni transmitida en texto plano
-
-
+- **Almacenaje de datos**: El usuario tiene la opción de exportar el objeto de su búsqueda en archivos .json, .txt, .xml o .bin
+- **Control de errores**:
+	- Nos aseguramos que el usuario introdujo el parámetro obligatorio para realizar una consulta
+	- Si la consulta no devuelve ningún resultado se avisa al usuario de manera adecuada
+	- Capturamos el error de la API de tener ids válidos sin ningún objeto asociado y lo manejamos adecuadamente
+	- Si el objeto obtenido no cuenta con alguno de los atributos que mostramos en la vista lo manejamos con valores por defecto, ej: un objeto sin imagen disponible mostramos una imagén avisando al usuario que no hay imagen disponible
+- **Uso offline**: Cada vez que obtenemos una nuevo objeto lo guardamos en nuestra cache, también hacemos lo mismo con el total de obras disponibles y los departamentos; por lo tanto es posible para nuestra app funcionar offline
+- **Almacenamiento del último estado de la aplicación**: Al cerrar la aplicación se le muestra un mensaje al usuario preguntándole si quiere guardar la consulta actual, con sus parámetros y objeto devuelto en un archivo .json. La siguiente vez que se inicié la sesión y un archivo de save existe se le preguntará al usuario si desea restaurar la última sesión
+- **Adición de un login**: El usuario tendrá que logearse a una cuenta almacenada en un fichero properties que almacena las credenciales (nombre de usuario y contraseña). En la vista de acceso, el usuario ingresará sus datos, los cuales se validarán comparándolos con los almacenados previamente. Para asegurar las credenciales, se utiliza el algoritmo de cifrado SHA-256, que garantiza que la contraseña no sea almacenada ni transmitida en texto plano 
 
 # 6. Propuestas de mejora: nuevas opciones, control de errores ... {#6-propuestas-de-mejora-y-errores}
-
-- **Paginación** :En lugar de mostrar únicamente el primer resultado de una consulta, se podría implementar un sistema de navegación con flechas que permita al usuario desplazarse entre los distintos resultados aportando mayor variedad.
-
+- **Paginación** :En lugar de mostrar únicamente el primer resultado de una consulta, se podría implementar un sistema de navegación con flechas que permita al usuario desplazarse entre los distintos resultados aportando mayor variedad y además permitir ordenarlos por diferentes campos como el nombre de la obra o la fecha de creación.
+- **Más opciones de filtrado**
+- **Opción para limpiar la cache**
+- **QoL Changes**: Opción para borrar todos los campos del formulario 
 - **Importar**: Además de la opción de exportar los datos, sería útil implementar una funcionalidad que permita importarlos. Serviría para la reutilización de información previamente exportada.
+  
 # 7. Conclusiones y opinión del trabajo realizado. Incluid dedicación temporal y cualificación estimada. {#7-conclusiones-y-opinión}
-
+Al principio costo hacerse al modelo de trabajo en grupo por GitHub y congigurar el JavaFX. Sin embargo, una vez superados esos obstáculos avanzamos bastante en poco tiempo.
+Creemos que nos quedó un trabajo muy bueno y esperamos una nota acorde (entre un 9 - 10) :)
+Para futuros proyectos hemos aprendido a dedicarle más tiempo a la planificación y organización.
+Con respecto a la API encontramos, a medida que trabajábamos con ella, diversos errores que condicionaron el funcionamento de nuestra app; por ejemplo no se pueden realizar consultas filtradas por autor a la API, existen ids sin objetos asociados, la estructura de los objeetos no es consistente...
