@@ -161,6 +161,16 @@ public class HelloController {
         cargarDatos();
     }
 
+    @FXML
+    void buscarObraAleatoria(MouseEvent event) {
+        //Quitamos el aviso de obra no encontrada que pueda haberse quedado de la anterior busqueda
+        obraNotFound.setVisible(false);
+
+        ApiRequester requester = new ApiRequester();
+        artPiece= requester.getRandomArtPiece();
+        cargarDatos();
+    }
+
     // Vuelca los datos de una obra de arte en la vista, es una función a parte para usarlo a la hora de hacer
     // consultas o carga la última actividad
     public void cargarDatos(){

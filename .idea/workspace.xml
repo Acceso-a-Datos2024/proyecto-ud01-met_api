@@ -5,28 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f0680be-0946-482c-b49b-3e42aa717210" name="Changes" comment="Exportar datos en txt json y xml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/styles/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cache/objects.bin" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cache/objects.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/styles/formulario.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/styles/formulario.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cache/objects.bin" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cache/objects.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ApiRequester.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ApiRequester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ArtPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ArtPiece.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Cache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Cache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/CacheType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/CacheType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Departments.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Departments.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Measurement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Measurement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Response.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ResponseList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ResponseList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Tag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/SaveSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/SaveSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/styles/formulario.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/styles/formulario.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Model/ElementMeasurements.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +32,12 @@
     &quot;assignee&quot;: &quot;Samugcor&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Acceso-a-Datos2024/proyecto-ud01-met_api.git&quot;,
-    &quot;accountId&quot;: &quot;7e5bb952-d67b-4796-b2d7-757c38ff44cb&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Acceso-a-Datos2024/proyecto-ud01-met_api.git",
+    "accountId": "dd7cc7ed-df53-4503-8c8f-e16848ccb65b"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -219,6 +198,7 @@
       <workItem from="1729350226837" duration="4274000" />
       <workItem from="1729385571915" duration="218000" />
       <workItem from="1729388892959" duration="2512000" />
+      <workItem from="1729500501737" duration="282000" />
     </task>
     <task id="LOCAL-00001" summary="Cambios interfaz busqueda y controllers">
       <option name="closed" value="true" />
