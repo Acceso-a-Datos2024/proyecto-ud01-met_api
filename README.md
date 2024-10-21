@@ -28,25 +28,7 @@ En las siguientes capturas podemos ver distintas peticiones realizadas a la API 
 
 # 2. Manual técnico para desarrolladores (puede ser mediante capturas con explicaciones o vídeo tutorial*) {#2-manual-técnico-para-desarrolladores}
 
-Esta aplicación está  diseñada para descubrir nuevas obras de arte dentro de la colección del Museo Metropolitano de Arte, no para consultar obras especificas, aunque el usuario podrá acotar los resultados para encontrar una pieza que coincida con sus intereses. 
 
-Al iniciar la aplicación lo primero que nos aparecerá es el login. Podremos acceder con el usuario "admin" y la contraseña "admin123". 
-![image](https://github.com/user-attachments/assets/73c5301f-22ee-4ad6-a799-b801e590d5b8)
-
-
-
-Tras acceder el usuario deberá proporcionar una palabra clave (obligatoria), y otros parámetros optativos para filtrar la búsqueda según departamento o buscando solo entre las obras populares. Debemos tener en cuenta que no todas las obras del MET cuentan con imágenes de dominio público, en cuyo caso se indicará que no hay imágenes disponibles. También existe la posibilidad de pedir una obra aleatoria, que siempre devolverá una con imagen.
-
-![image](https://github.com/user-attachments/assets/ae8a0c3c-6990-484a-b66e-22dc16f5dfb5)
-
-
-Una vez realizada la búsqueda el resultado puede tardar unos pocos segundos en aparecer, dependiendo de la cantidad de obras que coincidan con los criterios. Esta espera será más breve cuanto más se use la aplicación gracias al uso del cache. 
-Cuando todo este listo podremos ver una imagen (si existe una de dominio público) de la obra, su título, autor, año de creación y medio.
-![image](https://github.com/user-attachments/assets/e0788cdf-c2ec-4696-8f71-2de3beff48df)
-
-Estos datos se pueden exportar en diferentes formatos para distintos usos. El botón de exportar se encuentra en la barra de tareas, en la esquina superior derecha. En estos momentos la aplicación permite:
-- **La exportación de los datos resumidos:** donde los datos mostrados en la interfaz se guardan en un archivo de texto. Es un formato más sencillo para un uso casual.
-- **La exportación de los datos completos:** los datos completos de la obra se pueden guardar en formato json, xml y binario. Esto incluye toda la información proporcionada por la API.
 
 ## Model
 En la carpeta Model encontramos todas las clases que nos servirán para la realización de consultas a la API, el manejo de sus respuestas a partir de objetos a las que mapearemos dichas respuestas y la administración de la cache de nuestra aplicación.
@@ -100,6 +82,25 @@ El método **searchGetArtPiece** realiza consultas a la API con los filtros de b
 A partir de nuestro objeto ResponseList comprobamos si la búsqueda obtuvo una respuesta o no (si la lista de ids de nuestro objeto ResponseList está vacía o no). Si está vacía devolvemos null y el controlador ya se encargará de actualizar la vista de manera adecuada. Si obtuvo respuesta cogemos el primer id de la lista y comprobamos si está presente en nuestra cache de ids y objetos válidos. Si es así leemos su JSON de ahí, lo mapeamos a un objeto ArtPiece y se lo devolvemos al controlador. Si no está en cache construimos una URL de petición por ese id, concatenando el id a nuestra baseURL y realizamos la consulta a la API, guardamos el id y su objeto en la cache y mapeamos a un objeto ArtPiece la respuesta, que se lo devolveremos al controlador.
 
 # 3. Manual de usuario con juego de pruebas (puede ser mediante capturas con explicaciones o vídeo tutorial*) {#3-manual-de-usuario}
+Esta aplicación está  diseñada para descubrir nuevas obras de arte dentro de la colección del Museo Metropolitano de Arte, no para consultar obras especificas, aunque el usuario podrá acotar los resultados para encontrar una pieza que coincida con sus intereses. 
+
+Al iniciar la aplicación lo primero que nos aparecerá es el login. Podremos acceder con el usuario "admin" y la contraseña "admin123". 
+![image](https://github.com/user-attachments/assets/73c5301f-22ee-4ad6-a799-b801e590d5b8)
+
+
+
+Tras acceder el usuario deberá proporcionar una palabra clave (obligatoria), y otros parámetros optativos para filtrar la búsqueda según departamento o buscando solo entre las obras populares. Debemos tener en cuenta que no todas las obras del MET cuentan con imágenes de dominio público, en cuyo caso se indicará que no hay imágenes disponibles. También existe la posibilidad de pedir una obra aleatoria, que siempre devolverá una con imagen.
+
+![image](https://github.com/user-attachments/assets/ae8a0c3c-6990-484a-b66e-22dc16f5dfb5)
+
+
+Una vez realizada la búsqueda el resultado puede tardar unos pocos segundos en aparecer, dependiendo de la cantidad de obras que coincidan con los criterios. Esta espera será más breve cuanto más se use la aplicación gracias al uso del cache. 
+Cuando todo este listo podremos ver una imagen (si existe una de dominio público) de la obra, su título, autor, año de creación y medio.
+![image](https://github.com/user-attachments/assets/e0788cdf-c2ec-4696-8f71-2de3beff48df)
+
+Estos datos se pueden exportar en diferentes formatos para distintos usos. El botón de exportar se encuentra en la barra de tareas, en la esquina superior derecha. En estos momentos la aplicación permite:
+- **La exportación de los datos resumidos:** donde los datos mostrados en la interfaz se guardan en un archivo de texto. Es un formato más sencillo para un uso casual.
+- **La exportación de los datos completos:** los datos completos de la obra se pueden guardar en formato json, xml y binario. Esto incluye toda la información proporcionada por la API.
 # 4. Explicación del reparto de las tareas entre ambos integrantes. {#4-explicación-reparto-tareas}
 # 5. Extras realizados (solo si habéis codificado alguno) {#5-extras-realizados}
 
