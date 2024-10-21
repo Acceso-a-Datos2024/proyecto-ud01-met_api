@@ -5,28 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f0680be-0946-482c-b49b-3e42aa717210" name="Changes" comment="Exportar datos en txt json y xml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/styles/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cache/objects.bin" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cache/objects.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/styles/formulario.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/proyectoud1_metapi/styles/formulario.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cache/objects.bin" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cache/objects.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/HelloApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ApiRequester.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ApiRequester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ArtPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ArtPiece.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Cache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Cache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/CacheType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/CacheType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Departments.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Departments.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Measurement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Measurement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Response.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ResponseList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/ResponseList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/Model/Tag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/SaveSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/SaveSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/styles/formulario.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/proyectoud1_metapi/styles/formulario.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Model/ElementMeasurements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,24 +58,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Users/Sam/Desktop/Nueva carpeta/proyecto-ud01-met_api/src/main/resources/Icon&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/a22iagorg/Documents/GitHub/proyecto-ud01-met_api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\Sam\Desktop\Nueva carpeta\proyecto-ud01-met_api\src\main\resources\Icon" />
@@ -219,6 +199,7 @@
       <workItem from="1729350226837" duration="4274000" />
       <workItem from="1729385571915" duration="218000" />
       <workItem from="1729388892959" duration="2512000" />
+      <workItem from="1729500490328" duration="716000" />
     </task>
     <task id="LOCAL-00001" summary="Cambios interfaz busqueda y controllers">
       <option name="closed" value="true" />
