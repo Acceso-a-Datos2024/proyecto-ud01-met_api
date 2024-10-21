@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import java.net.URL?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="com.example.proyectoud1_metapi.AccesoController">
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="com.example.proyectoud1_metapi.Controller.AccesoController">
     <stylesheets>
         <URL value="@styles/formulario.css" />
     </stylesheets>

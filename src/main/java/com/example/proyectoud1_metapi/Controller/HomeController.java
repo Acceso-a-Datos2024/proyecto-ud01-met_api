@@ -1,9 +1,8 @@
-package com.example.proyectoud1_metapi;
+package com.example.proyectoud1_metapi.Controller;
 
 import com.example.proyectoud1_metapi.Model.*;
-import com.fasterxml.jackson.core.exc.StreamReadException;
+import com.example.proyectoud1_metapi.SaveSystem;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -18,7 +17,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HelloController {
+public class HomeController {
 
     FileChooser fileChooser= new FileChooser();
     static ArtPiece artPiece;

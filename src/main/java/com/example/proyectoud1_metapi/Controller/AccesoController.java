@@ -1,7 +1,9 @@
-package com.example.proyectoud1_metapi;
+package com.example.proyectoud1_metapi.Controller;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
+import com.example.proyectoud1_metapi.HomeApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -9,8 +11,6 @@ import javafx.scene.control.TextField;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-import java.io.FileInputStream;
-import java.io.IOException;
 
 public class AccesoController {
 
@@ -44,7 +44,7 @@ public class AccesoController {
 
         //Si coincide con las credenciales guardadas accede a la vista principal, si no muestra un mensaje de error
         if (username.equals(usernameAcceso) && password.equals(passwordaAccesoHaseada)) {
-            HelloApplication.setRoot("hello-view");
+            HomeApplication.setRoot("hello-view");
 
         }else{
             messageLabel.setText("Usuario o contraseña incorrectos");
