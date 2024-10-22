@@ -7,7 +7,7 @@
 - [4. Explicación del reparto de las tareas](#4-explicación-del-reparto-de-las-tareas-entre-ambos-integrantes) 
 - [5. Extras realizados](#5-extras-realizados) 
 - [6. Propuestas de mejora](#6-propuestas-de-mejora-nuevas-opciones-control-de-errores-) 
-- [7. Conclusiones y opinión](#7-conclusiones,-opinión-del-trabajo-realizado,-dedicación-temporal-y-cualificación-estimada)
+- [7. Conclusiones y opinión](#7-conclusiones-opinión-del-trabajo-realizado-dedicación-temporal-y-cualificación-estimada)
 
 ---
 
