@@ -116,11 +116,13 @@ Es el archivo que se encarga de manejar el login a la aplicación, teniendo como
 
 El método validarCredenciales es el que comprueba si los datos coinciden y en caso de que así sea cambia la vista a la principal. En caso avisa al usuario en un label
 
-==imagen==
+![image](https://github.com/user-attachments/assets/ae58b64d-2abb-4f14-bc80-8d39f0c1fd6d)
+
 
 Al querer una mayor seguridad la contraseña se guarda hasheada en nuestro fichero por lo que hay que hacer lo mismo con la que introduce el usario para poder compararlas. De esto se encarga la función hashPassword que es llamada por la anterior
 
-==imagen==
+![image](https://github.com/user-attachments/assets/e57b8242-d385-4e48-8ac6-ddce05f18799)
+
 
 ### HomeController
 
@@ -128,23 +130,27 @@ Este archivo maneja toda la vista principal, requiriendo metodos del ApiRequeste
 
 initialize se ejecuta nada mas entrar en la vista y carga todos los datos necesarios como los departamentos para llenar el comboBox además de preguntar si quieres restaurar la última búsqueda.
 
-==imagen==
+![image](https://github.com/user-attachments/assets/bb54e200-b89e-4fda-abf9-defdae28c1de)
+
 
 Para eso último llama a getDepartmentsFromJson que coge todos los departamentos guardados en un json al ser algo que no va a cambiar frecuentemente como para hacer una consulta a la api cada vez que se inicie el programa
 
-==imagen==
+![image](https://github.com/user-attachments/assets/fc546923-82ce-47fe-8bae-3342356f4c86)
 
 La función principal es buscarObra ya que es la encargada de preparar todos los datos metidos por el usuario y una vez compruebe que todo está correcto llama a la clase ApiRequester para que haga la petición a la Api consiguiendo así todos los datos necesarios
 
-==imagen==
+![image](https://github.com/user-attachments/assets/b805740e-02df-4cec-bc05-5ddeecae6565)
+
 
 Una vez la función anterior traiga los datos llama a cargarDatos que mostrará los datos de mayor interés cargandolos en la vista, o limpiando esta misma en caso de que no se haya encontrado ninguna obra de arte con las características especificadas
 
-==imagen==
+![image](https://github.com/user-attachments/assets/63564408-f290-4d3b-a4f2-fe0146ec13b6)
+
 
 A mayores, buscarObraAleatoria buscará una obra aleatoria por si el usuario quiere ver obras de arte sin tener claro algún parámetro de búsqueda
 
-==imagen==
+![image](https://github.com/user-attachments/assets/4dc1fe0f-d954-4555-9a87-58df1805e1d3)
+
 
 ## Jar
 
