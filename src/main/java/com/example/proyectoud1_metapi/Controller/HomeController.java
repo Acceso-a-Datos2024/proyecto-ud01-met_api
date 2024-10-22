@@ -118,7 +118,6 @@ public class HomeController {
     protected void buscarObra() throws IOException {
         //Quitamos el aviso de obra no encontrada que pueda haberse quedado de la anterior busqueda
         obraNotFound.setVisible(false);
-
         ApiRequester requester = new ApiRequester();
         String etiqueta = etiquetaBusqueda.getText();
         if (etiqueta.isEmpty()) {
@@ -129,7 +128,6 @@ public class HomeController {
             nombreAutor.setText("");
             medioObra.setText("");
             imagenObra.setImage(null);
-
             // Opcional: Mostrar un mensaje de error (puedes usar un Label o un Alert)
 //            Alert alert = new Alert(Alert.AlertType.WARNING);
 //            alert.setTitle("Advertencia");
@@ -137,14 +135,11 @@ public class HomeController {
 //            alert.setContentText("El campo 'Etiqueta' es obligatorio");
 //            alert.show();
 //            System.out.println("El campo 'Etiqueta' es obligatorio.");
-
             return; // Salir del método para no realizar la búsqueda
         } else {
             // Limpiar el estilo si hay texto
             etiquetaBusqueda.setStyle("");
-        }
-
-
+       }
         //Comprueba si se seleccionó o no un departamento o las obras recomendadas para mandar el valor escogido o null
         Departments departamentoSeleccionado = (Departments) departamentosBusqueda.getSelectionModel().getSelectedItem();
         Integer departmentId = null;

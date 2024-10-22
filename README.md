@@ -110,11 +110,43 @@ A partir de nuestro objeto ResponseList comprobamos si la búsqueda obtuvo una r
 ## Controller
 En la carpeta Controller encontramos archivos que comunican la parte gráfica de la aplicación con la lógica a través de eventos. Hay un archivo por cada vista, en este caso uno para el Acceso y otro para el Home.
 
+### AccesoController
 
+Es el archivo que se encarga de manejar el login a la aplicación, teniendo como único objetivo verificar si los datos metidos por el usuario coinciden con las credenciales guardadas en acceso.properties
 
+El método validarCredenciales es el que comprueba si los datos coinciden y en caso de que así sea cambia la vista a la principal. En caso avisa al usuario en un label
 
+==imagen==
 
-### Jar
+Al querer una mayor seguridad la contraseña se guarda hasheada en nuestro fichero por lo que hay que hacer lo mismo con la que introduce el usario para poder compararlas. De esto se encarga la función hashPassword que es llamada por la anterior
+
+==imagen==
+
+### HomeController
+
+Este archivo maneja toda la vista principal, requiriendo metodos del ApiRequester para cargar los datos
+
+initialize se ejecuta nada mas entrar en la vista y carga todos los datos necesarios como los departamentos para llenar el comboBox además de preguntar si quieres restaurar la última búsqueda.
+
+==imagen==
+
+Para eso último llama a getDepartmentsFromJson que coge todos los departamentos guardados en un json al ser algo que no va a cambiar frecuentemente como para hacer una consulta a la api cada vez que se inicie el programa
+
+==imagen==
+
+La función principal es buscarObra ya que es la encargada de preparar todos los datos metidos por el usuario y una vez compruebe que todo está correcto llama a la clase ApiRequester para que haga la petición a la Api consiguiendo así todos los datos necesarios
+
+==imagen==
+
+Una vez la función anterior traiga los datos llama a cargarDatos que mostrará los datos de mayor interés cargandolos en la vista, o limpiando esta misma en caso de que no se haya encontrado ninguna obra de arte con las características especificadas
+
+==imagen==
+
+A mayores, buscarObraAleatoria buscará una obra aleatoria por si el usuario quiere ver obras de arte sin tener claro algún parámetro de búsqueda
+
+==imagen==
+
+## Jar
 
 Para generar el jar seguimos los pasos puestos en el aula virtual y la documentación oficial de jetbrains sobre Artifacts, a continuación hay unas imágenes con el proceso pero fue tpdp guiándonos de la página oficial: https://www.jetbrains.com/help/idea/working-with-artifacts.html
 
