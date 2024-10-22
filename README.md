@@ -1,13 +1,13 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/JkDJUAAN)
 
 # Index
-- [1. Introducción al supuesto con descripción de la API y capturas POSTMAN]()
-- [2. Manual técnico para desarrolladores]()
-- [3. Manual de usuario con juego de pruebas]() 
-- [4. Explicación del reparto de las tareas]() 
-- [5. Extras realizados]() 
-- [6. Propuestas de mejora]() 
-- [7. Conclusiones y opinión]()
+- [1. Introducción al supuesto con descripción de la API y capturas POSTMAN](#1-introducción-al-supuesto-con-descripción-de-la-api-y-capturas-postman)
+- [2. Manual técnico para desarrolladores](#2-manual-técnico-para-desarrolladores) 
+- [3. Manual de usuario con juego de pruebas](#3-manual-de-usuario-con-juego-de-pruebas) 
+- [4. Explicación del reparto de las tareas](#4-explicación-del-reparto-de-las-tareas-entre-ambos-integrantes) 
+- [5. Extras realizados](#5-extras-realizados) 
+- [6. Propuestas de mejora](#6-propuestas-de-mejora-nuevas-opciones-control-de-errores-) 
+- [7. Conclusiones y opinión](#7-conclusiones,-opinión-del-trabajo-realizado,-dedicación-temporal-y-cualificación-estimada)
 
 ---
 
@@ -26,7 +26,7 @@ En las siguientes capturas podemos ver distintas peticiones realizadas a la API 
 ![Captura de pantalla 2024-10-14 132126](https://github.com/user-attachments/assets/732e174e-65f4-4e98-8449-6bd8f2ecfe0f)
 
 
-# 2. Manual técnico para desarrolladores (puede ser mediante capturas con explicaciones o vídeo tutorial*)
+# 2. Manual técnico para desarrolladores
 
 ## Model
 En la carpeta Model encontramos todas las clases que nos servirán para la realización de consultas a la API, el manejo de sus respuestas a partir de objetos a las que mapearemos dichas respuestas y la administración de la cache de nuestra aplicación.
@@ -116,7 +116,7 @@ A partir de nuestro objeto ResponseList comprobamos si la búsqueda obtuvo una r
 
 
 
-# 3. Manual de usuario con juego de pruebas (puede ser mediante capturas con explicaciones o vídeo tutorial*)
+# 3. Manual de usuario con juego de pruebas
 Esta aplicación está  diseñada para descubrir nuevas obras de arte dentro de la colección del Museo Metropolitano de Arte, no para consultar obras especificas, aunque el usuario podrá acotar los resultados para encontrar una pieza que coincida con sus intereses. 
 
 Al iniciar la aplicación lo primero que nos aparecerá es el login. Podremos acceder con el usuario "admin" y la contraseña "admin123". 
@@ -155,7 +155,7 @@ Estos datos se pueden exportar en diferentes formatos para distintos usos. El bo
 - Exportación
 - Guardar y cargar última sesión
   
-# 5. Extras realizados (solo si habéis codificado alguno)
+# 5. Extras realizados
 - **Almacenaje de datos**: El usuario tiene la opción de exportar el objeto de su búsqueda en archivos .json, .txt, .xml o .bin
 - **Control de errores**:
 	- Nos aseguramos que el usuario introdujo el parámetro obligatorio para realizar una consulta
@@ -173,7 +173,7 @@ Estos datos se pueden exportar en diferentes formatos para distintos usos. El bo
 - **QoL Changes**: Opción para borrar todos los campos del formulario 
 - **Importar**: Además de la opción de exportar los datos, sería útil implementar una funcionalidad que permita importarlos. Serviría para la reutilización de información previamente exportada.
   
-# 7. Conclusiones y opinión del trabajo realizado. Incluid dedicación temporal y cualificación estimada
+# 7. Conclusiones, opinión del trabajo realizado, dedicación temporal y cualificación estimada
 Al principio costo hacerse al modelo de trabajo en grupo por GitHub y congigurar el JavaFX. Sin embargo, una vez superados esos obstáculos avanzamos bastante en poco tiempo.
 
 Creemos que nos quedó un trabajo muy bueno y esperamos una nota acorde (entre un 9 - 10) :)
