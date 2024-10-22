@@ -75,13 +75,11 @@ public class HomeController {
                     artPiece=null;
                 }
             });
-
-
         } catch (Exception e) {
             System.out.println("No se encontraron datos de sesiones anteriores");
         }
-
     }
+
     // Se ejecuta cuando el usuario cierra la página, permite guardar la consulta al usario
     public static void closing(){
         if (artPiece != null){

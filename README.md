@@ -106,12 +106,22 @@ A partir de nuestro objeto ResponseList comprobamos si la búsqueda obtuvo una r
 ![image](https://github.com/user-attachments/assets/d4bf8b01-2703-41f0-9f32-0fd9eda87888)
 
 
-##Jar
+
+
+
+
+### Jar
+
+Para generar el jar seguimos los pasos puestos en el aula virtual y la documentación oficial de jetbrains sobre Artifacts, a continuación hay unas imágenes con el proceso pero fue tpdp guiándonos de la página oficial: https://www.jetbrains.com/help/idea/working-with-artifacts.html
 
 ![image](https://github.com/user-attachments/assets/5221d32e-d1af-4710-91c6-39617470bb55)
 
+
+El jar solo funcionará en el pc donde se creó al tener que poner el propio usuario o el lugar donde está descargado el javaFX
 ![image](https://github.com/user-attachments/assets/6f15032d-5112-4e36-87d1-7418c6c7bde4)
 
+
+EL programa se ejecuta con normalidad usando el .jar
 ![image](https://github.com/user-attachments/assets/40ebff83-5d5c-4cf1-9116-599ab44746d2)
 
 
@@ -120,6 +130,7 @@ A partir de nuestro objeto ResponseList comprobamos si la búsqueda obtuvo una r
 Esta aplicación está  diseñada para descubrir nuevas obras de arte dentro de la colección del Museo Metropolitano de Arte, no para consultar obras especificas, aunque el usuario podrá acotar los resultados para encontrar una pieza que coincida con sus intereses. 
 
 Al iniciar la aplicación lo primero que nos aparecerá es el login. Podremos acceder con el usuario "admin" y la contraseña "admin123". 
+
 ![image](https://github.com/user-attachments/assets/73c5301f-22ee-4ad6-a799-b801e590d5b8)
 
 
@@ -141,7 +152,7 @@ Estos datos se pueden exportar en diferentes formatos para distintos usos. El bo
 - Login
 - Cambio de escenas
 - Encriptado de contraseña
-- Consulta segun parametros
+- Consulta según parametros
 - Muestra de datos
 
 #### Manuel
